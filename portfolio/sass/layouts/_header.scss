@@ -1,0 +1,57 @@
+.header {
+    padding: 20px 0;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__container a:hover {
+    color: $color-primary;
+}
+
+.logo__container {
+    width: 5rem;
+    height: 5rem;
+}
+
+.logo {
+    width: 5rem;
+}
+
+.logo:hover {
+    fill: $color-primary;
+}
+
+.header__navigation {
+    margin-left: auto;
+    margin-right: 1.5rem;
+}
+
+.nav-list {
+    display: flex;
+    font-size: 2rem;
+    line-height: 5rem;
+}
+
+.nav__item {
+    list-style: none;
+    padding: 0 3rem;
+}
+
+.header__languages {
+    display: flex;
+}
+
+.language-switcher {
+font-style: normal;
+font-weight: bold;
+text-align: center;
+color: $color-text;
+}
+
+.slash {
+    padding: 0 0.8rem;
+}
