@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/rolling-scopes-school/orla90-JSFEPRESCHOOL/issues"
   },
-  "homepage": "https://github.com/rolling-scopes-school/orla90-JSFEPRESCHOOL#readme"
+  "homepage": "https://github.com/rolling-scopes-school/orla90-JSFEPRESCHOOL#readme",
+  "dependencies": {
+    "normalize-scss": "^7.0.1"
+  }
 }

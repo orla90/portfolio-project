@@ -1,5 +1,5 @@
 .button {
-    font-family:  "Inter", Verdana, sans-serif;
+    @extend %font-primary;
     padding: 8px 72px 7px;
     font-style: normal;
     font-weight: normal;
@@ -7,20 +7,17 @@
     line-height: 4rem;
     cursor: pointer;
     transition: all .3s;
-}
-
-.button_bordered {
-    background: $color-background;
-    border: 2px solid $color-primary;
-    color: $color-primary;
-}
-
-.button_colored {
-    background: $color-primary;
-    color: $color-background;
-    border: 2px solid $color-primary;
-}
-
-.button:hover {
-    color: $color-text;
+    &_bordered {
+        background: $color-background;
+        border: 2px solid $color-primary;
+        color: $color-primary;
+    }
+    &_colored {
+        background: $color-primary;
+        color: $color-background;
+        border: 2px solid $color-primary;
+    }
+    &:hover {
+        color: $color-text;
+    }
 }

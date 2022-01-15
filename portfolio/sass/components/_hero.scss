@@ -1,4 +1,28 @@
-.hero {
-    padding: 160px 860px 0 80px;
+.hero__container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background: url('../assets/img/bg.jpg') center -90px no-repeat;
+    background-size: 1440px 910px;	
 }
 
+.hero__content {
+    margin: 16rem 0 0 8rem;
+}
+
+.hero__title {
+    max-width: 50rem;
+    margin: 0 0 1rem;
+}
+
+.hero__description
+{
+    max-width: 47rem;
+    @extend %font-primary;
+    @include font($size: 2rem, $height: 4rem, $weight: normal);
+    margin: 0 0 2.5rem;
+}
+
+.hero__button {
+    margin: 0 0 33rem;
+}

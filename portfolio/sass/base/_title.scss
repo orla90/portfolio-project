@@ -1,0 +1,25 @@
+.section-title-block {
+    width: 700px;
+	position: relative;
+    margin: 10rem auto 6rem;
+}
+
+.section-title {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+    text-align: center;
+    @extend %font-add;
+    @include font($size: 4rem, $height: 8rem);
+    display: table;
+    color: $color-primary;
+    background-color: $color-background;
+    text-transform: capitalize;
+    position: relative; 
+    z-index: 2; 
+}
+
+.title-line {
+    position: absolute;
+    top: 50%;
+}

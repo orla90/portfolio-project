@@ -1,0 +1,22 @@
+.logo__container {
+    width: 5rem;
+    height: 4rem;
+}
+
+.logo {
+    width: 5rem;
+}
+
+a.logo {
+    line-height: 0;
+}
+
+.logo-path {
+    @extend %transition;
+}
+
+.logo-svg:hover {
+    .logo-path {
+        fill: $color-primary;
+    }
+}

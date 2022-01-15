@@ -1,35 +1,23 @@
+//Abstract
+@import "../node_modules/normalize-scss/sass/normalize";
 @import "abstract/constants";
+@import "abstract/placeholders";
+@import "abstract/mixin";
 
 //Base
 @import "base/base";
 @import "base/buttons";
+@import "base/logo";
+@import "base/icons";
+@import "base/title";
 
 //Layouts
 @import "layouts/container";
 @import "layouts/header";
+@import "layouts/columns";
 
 //Components
 @import "components/contact";
 @import "components/hero";
-
-// .container {
-//     width: 1440px;
-//     margin: 0 auto;
-//     padding: 0 20px;
-// }
-// /* header */
-// 
-// .nav-list {
-//     display: flex;
-//     justify-content: flex-end;
-//     align-items: center;
-//     list-style: none;
-//     margin-left: auto;
-// }
-// .nav-item {
-//     font-size: 20px;
-//     font-style: normal;
-//     line-height: 50px;
-//     letter-spacing: 0em;
-//     text-align: left;
-// }
+@import "components/navigation";
+@import "components/skills";
