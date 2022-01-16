@@ -1,4 +1,4 @@
-.nav__item, .logo-path {
+.play-path, .nav__item, .logo-path {
   transition: all 0.3s ease-out;
 }
 
@@ -85,11 +85,14 @@ a {
 }
 
 .button {
-  padding: 8px 72px 7px;
+  width: 220px;
+  height: 55px;
+  padding: 8px 0 7px;
   font-style: normal;
   font-weight: normal;
   font-size: 2rem;
   line-height: 4rem;
+  margin-left: 5px;
   cursor: pointer;
   transition: all 0.3s;
 }
@@ -107,6 +110,16 @@ a {
   color: #ffffff;
 }
 
+.button:first-child {
+  margin-left: 0;
+}
+
+.video__button {
+  margin: 0 auto;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
 .logo__container {
   width: 5rem;
   height: 4rem;
@@ -122,6 +135,38 @@ a.logo {
 
 .logo-svg:hover .logo-path {
   fill: #bdae82;
+}
+
+.ico {
+  cursor: pointer;
+  width: 66px;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0 0 50px;
+}
+
+.skills-icon_camera {
+  background-image: url(../assets/svg/camera\ 1.svg);
+  width: 61.84px;
+  height: 50px;
+}
+.skills-icon_video {
+  background-image: url(../assets/svg/video\ 1.svg);
+  width: 60px;
+  height: 50px;
+}
+.skills-icon_retouch {
+  background-image: url(../assets/svg/image\ 1.svg);
+  width: 66px;
+  height: 50px;
+}
+.skills-icon_audio {
+  background-image: url(../assets/svg/mic\ 1.svg);
+  width: 32px;
+  height: 50px;
 }
 
 .section-title-block {
@@ -178,6 +223,7 @@ a.logo {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  text-align: center;
 }
 .layout-4-columns > * {
   flex-basis: 22.8%;
@@ -187,8 +233,19 @@ a.logo {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  text-align: center;
 }
 .layout-3-columns > * {
+  flex-basis: 32%;
+}
+
+.portfolio__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+}
+.portfolio__content > * {
   flex-basis: 32%;
 }
 
@@ -261,6 +318,48 @@ a.logo {
 
 .section-title {
   width: 112px;
+}
+
+.skills-header {
+  margin: 0 0 20px;
+}
+
+.skills__description {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 3.6rem;
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.portfolio__buttons {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 60px;
+}
+
+.portfolio__foto {
+  width: 450px;
+  margin-bottom: 25px;
+}
+
+.video-block {
+  position: relative;
+}
+
+.foto__wedding {
+  width: 1400px;
+}
+
+.video__button {
+  position: absolute;
+  bottom: 287px;
+  left: 636px;
+}
+
+.play-svg:hover .play-path {
+  fill: #bdae82;
 }
 
 /*# sourceMappingURL=style.css.map */

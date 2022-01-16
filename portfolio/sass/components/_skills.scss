@@ -1,3 +1,13 @@
 .section-title {
     @include width($width: 112px);
 }
+
+.skills-header {
+    margin: 0 0 20px;
+}
+
+.skills__description {
+    @include font($size: 1.8rem, $height: 3.6rem, $weight: normal);
+    margin: 0 0 10px;
+    padding: 0;
+}

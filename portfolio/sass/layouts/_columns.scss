@@ -5,3 +5,7 @@
 .layout-3-columns {
     @include columns($width: 32%);
 }
+
+.portfolio__content {
+    @include columns($width: 32%);
+}

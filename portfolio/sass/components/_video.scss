@@ -1,0 +1,23 @@
+.video-block {
+    position: relative;
+}
+
+.foto__wedding {
+    width: 1400px;
+}
+
+.video__button {
+    position: absolute;
+    bottom: 287px;
+    left: 636px;
+}
+
+.play-path {
+    @extend %transition;
+}
+
+.play-svg:hover {
+    .play-path {
+        fill: $color-primary;
+    }
+}
