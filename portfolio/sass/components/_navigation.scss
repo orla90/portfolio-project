@@ -11,7 +11,7 @@
 .nav__item {
     list-style: none;
     text-transform: capitalize;
-    padding: 0 3rem;
+    padding: 0 1.5rem;
     @extend %transition;
     &:hover {
         color: $color-primary;

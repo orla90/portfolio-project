@@ -392,6 +392,10 @@ input:-webkit-autofill:active {
   margin: 0 0 33rem;
 }
 
+.hero p {
+  padding: 0;
+}
+
 .header__navigation {
   margin-left: auto;
   margin-right: 1.5rem;
@@ -408,7 +412,7 @@ input:-webkit-autofill:active {
 .nav__item {
   list-style: none;
   text-transform: capitalize;
-  padding: 0 3rem;
+  padding: 0 1.5rem;
 }
 .nav__item:hover {
   color: #bdae82;
