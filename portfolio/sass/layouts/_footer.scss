@@ -1,0 +1,35 @@
+.footer__container {
+    padding: 50px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__container a:hover {
+    color: $color-primary;
+    @extend %transition;
+}
+
+.social__networks {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-content: center;
+    width: 188px;
+    font-size: 0;
+    line-height: 0;
+}
+
+a.social__networks {
+    line-height: 0;
+}
+
+.icon-path {
+    @extend %transition;
+}
+
+.icon-svg:hover {
+    .icon-path {
+        fill: $color-primary;
+    }
+}

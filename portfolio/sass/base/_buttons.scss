@@ -22,6 +22,7 @@
     }
     &:hover {
         color: $color-text;
+        @extend %transition;
     }
 }
 
@@ -30,18 +31,21 @@
 }
 
 .video__button {
-    // width: 130px;
-    // height: 130px;
     margin: 0 auto;
     cursor: pointer;
     transition: all .3s;
-    // &:hover {
-    //     color: $color-primary;
-    // }
 }
 
-.play-video__button {
-    // width: 130px;
-    // height: 130px;
-    // background-image: url(../../assets/svg/video\ 1.svg);
+.contact__button {
+    margin: 0 0 195px;
+}
+
+.portfolio__buttons {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 60px;
+}
+
+.portfolio__buttons button:hover {
+    background: $color-primary;
 }

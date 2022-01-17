@@ -23,3 +23,13 @@
     position: absolute;
     top: 50%;
 }
+
+.section-title-contacts {
+    @extend %font-add;
+    @include font($size: 4rem, $height: 8rem);
+    display: table;
+    color: $color-primary;
+    text-transform: capitalize;
+    margin: 0 0 40px;
+    // padding: 60px 0 0;
+}

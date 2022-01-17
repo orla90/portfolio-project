@@ -13,4 +13,5 @@
 
 .header__container a:hover {
     color: $color-primary;
+    @extend %transition;
 }
