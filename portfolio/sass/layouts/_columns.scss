@@ -1,5 +1,5 @@
 .layout-4-columns {
-    @include columns($width: 22.8%);
+    @include columns($width: 25%);
 }
 
 .layout-3-columns {
@@ -7,5 +7,6 @@
 }
 
 .portfolio__content {
+    max-width: 1400px;
     @include columns($width: 32%);
 }
