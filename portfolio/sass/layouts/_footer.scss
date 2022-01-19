@@ -20,12 +20,24 @@
     line-height: 0;
 }
 
+.footer-item span {
+    padding-right: 15px;
+} 
+
+.footer-item span:last-child {
+    padding-right: 0;
+} 
+
 a.social__networks {
     line-height: 0;
 }
 
 .icon-path {
     @extend %transition;
+}
+
+.icon-svg {
+    cursor: pointer;
 }
 
 .icon-svg:hover {

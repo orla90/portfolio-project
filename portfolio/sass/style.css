@@ -12,17 +12,17 @@ span.price, .section-title-contacts, .section-title, h3, h2, h1 {
 
 @font-face {
   font-family: "Merriweather", serif;
-  src: url("assets/fonts/Merriweather/Merriweather-Bold.ttf");
+  src: url("../../assets/fonts/Merriweather/Merriweather-Bold.ttf");
   font-weight: 700;
 }
 @font-face {
   font-family: "Inter", sans-serif;
-  src: url("assets/fonts/Inter/static/Inter-Regular.ttf");
+  src: url("../../assets/fonts/Inter/Inter-VariableFont_slnt,wght.ttf");
   font-weight: 400;
 }
 @font-face {
   font-family: "Inter", sans-serif;
-  src: url("assets/fonts/Inter/static/Inter-Bold.ttf");
+  src: url("../../assets/fonts/Inter/static/Inter-Bold.ttf");
   font-weight: 700;
 }
 html {
@@ -44,6 +44,26 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
 }
 
 h1 {
@@ -74,7 +94,11 @@ h4 {
   line-height: 4rem;
 }
 
-section, main, footer, header, article {
+section,
+main,
+footer,
+header,
+article {
   display: block;
 }
 
@@ -147,8 +171,16 @@ a.logo {
   line-height: 0;
 }
 
+.logo-svg {
+  cursor: pointer;
+}
+
 .logo-svg:hover .logo-path {
   fill: #bdae82;
+}
+
+.logo-object {
+  cursor: pointer;
 }
 
 .ico {
@@ -218,15 +250,20 @@ a.logo {
   line-height: 8rem;
   display: table;
   color: #bdae82;
-  text-transform: capitalize;
   margin: 0 0 40px;
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 1440px;
   margin: auto;
+  padding: 0 20px;
 }
 
+@media (max-width: 1440px) {
+  .skills-items {
+    justify-content: space-around;
+  }
+}
 .header {
   padding: 20px 0;
 }
@@ -251,7 +288,7 @@ a.logo {
   text-align: center;
 }
 .layout-4-columns > * {
-  flex-basis: 22.8%;
+  flex-basis: 23%;
 }
 
 .layout-3-columns {
@@ -265,6 +302,7 @@ a.logo {
 }
 
 .portfolio__content {
+  max-width: 1400px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -295,8 +333,20 @@ a.logo {
   line-height: 0;
 }
 
+.footer-item span {
+  padding-right: 15px;
+}
+
+.footer-item span:last-child {
+  padding-right: 0;
+}
+
 a.social__networks {
   line-height: 0;
+}
+
+.icon-svg {
+  cursor: pointer;
 }
 
 .icon-svg:hover .icon-path {
@@ -315,7 +365,7 @@ a.social__networks {
 
 .contact-block {
   min-width: 450px;
-  margin: 60px 20px 0 0;
+  margin: 60px 0 0;
 }
 
 .contacts__line {
@@ -333,9 +383,10 @@ input:-webkit-autofill:active {
 .contact__form input, .contact__form textarea {
   width: 450px;
   color: #bdae82;
+  line-height: 40px;
   background: rgba(0, 0, 0, 0.5);
   border: 2px solid #bdae82;
-  padding: 15px 226px 15px 20px;
+  padding: 0 0 0 20px;
 }
 .contact__form input:focus, .contact__form textarea:focus {
   border: 2px solid #bdae82;
@@ -371,7 +422,7 @@ input:-webkit-autofill:active {
 }
 
 .hero__content {
-  margin: 16rem 0 0 8rem;
+  margin: 16rem 0 0 6rem;
 }
 
 .hero__title {
@@ -447,7 +498,7 @@ input:-webkit-autofill:active {
   font-weight: normal;
   line-height: 3.6rem;
   margin: 0 0 10px;
-  padding: 0;
+  padding: 0 20px;
 }
 
 .portfolio__foto {
@@ -498,6 +549,7 @@ input:-webkit-autofill:active {
 }
 
 span.price {
+  display: block;
   font-size: 2.4rem;
   font-style: normal;
   font-weight: bold;
@@ -515,7 +567,7 @@ span.price {
 }
 
 .price__button {
-  margin: 40px 0 43px;
+  margin: 40px 0;
 }
 
 /*# sourceMappingURL=style.css.map */
