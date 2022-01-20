@@ -33,6 +33,7 @@ input:-webkit-autofill:active {
         background: rgba( 0,0,0,.5);
         border: 2px solid $color-primary;
         padding: 0 0 0 20px;
+        transition: 180ms box-shadow ease-in-out;
         &:focus {
             border: 2px solid $color-primary;
             outline: none;
@@ -43,7 +44,13 @@ input:-webkit-autofill:active {
         }
     }
 
-    input::placeholder {
+    .contacts__line:focus {
+        max-width: 448px;
+        box-shadow: 0 0 0 2px $color-primary;
+      }
+
+    input::placeholder,
+    textarea::placeholder {
         color: $color-primary;
         @extend %font-primary;
         @include font($size: 2rem, $height: 4rem, $weight: normal);

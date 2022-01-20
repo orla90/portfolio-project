@@ -2,7 +2,8 @@
   transition: all 0.3s ease-out;
 }
 
-.hero__description, .contact__form textarea.contacts__line, .contact__form input::placeholder, .button, body {
+.hero__description, .contact__form textarea.contacts__line, .contact__form input::placeholder,
+.contact__form textarea::placeholder, .button, body {
   font-family: "Inter", Verdana, sans-serif;
 }
 
@@ -253,10 +254,48 @@ a.logo {
   margin: 0 0 40px;
 }
 
+.hamburger__line, .hamburger:after, .hamburger:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  background: #ffffff;
+  width: 100%;
+  height: 3px;
+}
+
+.hamburger {
+  display: none;
+  position: relative;
+  width: 50px;
+  height: 28px;
+}
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+}
+.hamburger:before {
+  top: 0;
+  left: 0;
+}
+.hamburger:after {
+  bottom: 0;
+  left: 0;
+}
+
+.hamburger__line {
+  top: calc(50% - 1.5px);
+  left: 0;
+}
+
 .container {
   max-width: 1440px;
   margin: auto;
-  padding: 0 20px;
+}
+@media (max-width: 1440px) {
+  .container {
+    padding: 0 20px;
+  }
 }
 
 @media (max-width: 1440px) {
@@ -275,6 +314,12 @@ a.logo {
   justify-content: space-between;
   background: url("../assets/img/bg.jpg") center 0 no-repeat;
   background-size: 1440px 910px;
+}
+@media (max-width: 768px) {
+  .header__container {
+    padding-left: 60px;
+    padding-right: 64px;
+  }
 }
 
 .header__container a:hover {
@@ -387,6 +432,7 @@ input:-webkit-autofill:active {
   background: rgba(0, 0, 0, 0.5);
   border: 2px solid #bdae82;
   padding: 0 0 0 20px;
+  transition: 180ms box-shadow ease-in-out;
 }
 .contact__form input:focus, .contact__form textarea:focus {
   border: 2px solid #bdae82;
@@ -395,7 +441,12 @@ input:-webkit-autofill:active {
 .contact__form input input, .contact__form textarea input {
   margin: 0 0 20px;
 }
-.contact__form input::placeholder {
+.contact__form .contacts__line:focus {
+  max-width: 448px;
+  box-shadow: 0 0 0 2px #bdae82;
+}
+.contact__form input::placeholder,
+.contact__form textarea::placeholder {
   color: #bdae82;
   font-size: 2rem;
   font-style: normal;
@@ -471,6 +522,16 @@ input:-webkit-autofill:active {
 
 .header__languages {
   display: flex;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 5rem;
+}
+@media (max-width: 768px) {
+  .header__languages {
+    margin-left: auto;
+    margin-right: 20px;
+  }
 }
 
 .language-switcher {
@@ -482,6 +543,17 @@ input:-webkit-autofill:active {
 
 .slash {
   padding: 0 0.8rem;
+}
+@media (max-width: 768px) {
+  .slash {
+    padding: 0 18px 0 9px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header__navigation {
+    display: none;
+  }
 }
 
 .section-title {

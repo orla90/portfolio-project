@@ -1,7 +1,9 @@
 .container {
     max-width: $content-width;
     margin: auto;
-    padding: 0 20px;
+    @include media-desktop {
+        padding: 0 20px;
+    }
 }
 
 @media (max-width: 1440px) {
@@ -9,3 +11,4 @@
       justify-content: space-around;
     }
   }
+  
