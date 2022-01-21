@@ -56,11 +56,17 @@ h6 {
 h1 {
   @extend %font-add;
   @include font($size: 6rem, $height: 12rem);
+  @include media-tablet {
+    @include font($size: 3.2rem, $height: 6.4rem, $weight: normal);
+  }
 }
 
 h2 {
   @extend %font-add;
   @include font($size: 4rem, $height: 8rem);
+  @include media-tablet {
+    @include font($size: 3.2rem, $height: 4rem);
+  }
 }
 
 h3 {

@@ -2,6 +2,13 @@
     @include columns($width: 23%);
 }
 
+.skills-wrapper {
+    @include media-tablet {
+        @include columns($width: 44.87%);
+        flex-wrap: wrap;
+    }
+}
+
 .layout-3-columns {
     @include columns($width: 32%);
 }

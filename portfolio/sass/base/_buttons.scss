@@ -1,12 +1,9 @@
 .button {
     @extend %font-primary;
     width: 220px;
-    height: 55px;
-    padding: 8px 0 7px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 2rem;
-    line-height: 4rem;
+    padding: 0.5rem 0;
+    @include font($size: 2rem, $height: 4rem, $weight: normal);
+    text-align: center;
     margin-left: 5px;
     cursor: pointer;
     transition: all .3s;
