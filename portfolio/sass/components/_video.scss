@@ -6,14 +6,33 @@
     position: relative;
 }
 
-.foto__wedding {
-    width: 1400px;
+.video__foto {
+    background: url(../assets/img/video-player.jpg) center no-repeat;
+    height: 70.5rem;
+    background-size: 1400px 705px;
+    @include media-tablet {
+        height: 41.8rem;
+        background: url(../assets/img/video-player-tablet.jpg) center no-repeat;
+        background-position: -1px 0px;
+        background-size: auto 419px;
+    }
 }
 
 .video__button {
     position: absolute;
-    bottom: 287px;
+    bottom: 275px;
     left: 636px;
+    > * {
+        @include media-tablet {
+            width: 100%;
+        }
+    }
+    @include media-tablet {
+        width: 6.46rem;
+        height: 6.47rem;
+        bottom: 176px;
+        left: 350px;
+    }
 }
 
 .play-path {

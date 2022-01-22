@@ -1,15 +1,15 @@
 .button {
     @extend %font-primary;
-    width: 220px;
+    width: 22rem;
     padding: 0.5rem 0;
     @include font($size: 2rem, $height: 4rem, $weight: normal);
     text-align: center;
-    margin-left: 5px;
+    margin-left: 0.5rem;
     cursor: pointer;
     transition: all .3s;
     &_bordered {
         background: $color-background;
-        border: 2px solid $color-primary;
+        border: 0.2rem solid $color-primary;
         color: $color-primary;
     }
     &_colored {
@@ -34,13 +34,26 @@
 }
 
 .contact__button {
-    margin: 0 0 195px;
+    margin: 0 0 19.5rem;
 }
 
 .portfolio__buttons {
     display: flex;
     justify-content: center;
-    margin: 0 0 60px;
+    margin: 0 0 6rem;
+    @include media-tablet {
+        margin-bottom: 5.5rem;
+        max-width: 44.5rem;
+        margin-left: auto;
+        margin-right: auto;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    >* {
+        @include media-tablet {
+            margin: 0 0 0.6rem;
+        }
+    }
 }
 
 .portfolio__buttons button:hover {

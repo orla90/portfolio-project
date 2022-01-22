@@ -126,20 +126,20 @@ a {
 }
 
 .button {
-  width: 220px;
+  width: 22rem;
   padding: 0.5rem 0;
   font-size: 2rem;
   font-style: normal;
   font-weight: normal;
   line-height: 4rem;
   text-align: center;
-  margin-left: 5px;
+  margin-left: 0.5rem;
   cursor: pointer;
   transition: all 0.3s;
 }
 .button_bordered {
   background: #000000;
-  border: 2px solid #bdae82;
+  border: 0.2rem solid #bdae82;
   color: #bdae82;
 }
 .button_colored {
@@ -162,13 +162,28 @@ a {
 }
 
 .contact__button {
-  margin: 0 0 195px;
+  margin: 0 0 19.5rem;
 }
 
 .portfolio__buttons {
   display: flex;
   justify-content: center;
-  margin: 0 0 60px;
+  margin: 0 0 6rem;
+}
+@media (max-width: 768px) {
+  .portfolio__buttons {
+    margin-bottom: 5.5rem;
+    max-width: 44.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 768px) {
+  .portfolio__buttons > * {
+    margin: 0 0 0.6rem;
+  }
 }
 
 .portfolio__buttons button:hover {
@@ -245,7 +260,7 @@ a.logo {
 @media (max-width: 768px) {
   .section-title-block {
     width: 36.4rem;
-    margin: 8rem auto 6.5rem;
+    margin: 8rem auto 5rem;
   }
 }
 
@@ -435,6 +450,25 @@ a.logo {
   flex-basis: 32%;
 }
 
+@media (max-width: 768px) {
+  .price-wrapper {
+    width: 42rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .price-wrapper > * {
+    flex-basis: 100%;
+  }
+  .price-wrapper > * {
+    margin-bottom: 4.8rem;
+  }
+}
+
 .footer__container {
   padding: 50px 20px;
   display: flex;
@@ -506,10 +540,13 @@ input:-webkit-autofill:active {
 .contact__form input, .contact__form textarea {
   width: 450px;
   color: #bdae82;
-  line-height: 40px;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 4rem;
   background: rgba(0, 0, 0, 0.5);
   border: 2px solid #bdae82;
-  padding: 0 0 0 20px;
+  padding: 0.3rem 0 0.3rem 2rem;
   transition: 180ms box-shadow ease-in-out;
 }
 .contact__form input:focus, .contact__form textarea:focus {
@@ -517,7 +554,7 @@ input:-webkit-autofill:active {
   outline: none;
 }
 .contact__form input input, .contact__form textarea input {
-  margin: 0 0 20px;
+  margin: 0 0 1.8rem;
 }
 .contact__form .contacts__line:focus {
   max-width: 448px;
@@ -535,7 +572,7 @@ input:-webkit-autofill:active {
   resize: none;
   height: 100px;
   width: 450px;
-  margin: 0 0 30px;
+  margin: 0 0 2.4rem;
   font-size: 2rem;
   font-style: normal;
   font-weight: normal;
@@ -711,17 +748,40 @@ input:-webkit-autofill:active {
   }
 }
 
+@media (max-width: 768px) {
+  .portfolio__content > * {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 768px) {
+  .portfolio__content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
 .portfolio__foto {
-  width: 450px;
-  margin-bottom: 25px;
+  width: 45rem;
+  margin-bottom: 2.5rem;
 }
 
 .portfolio__foto:nth-child(4) {
   margin-bottom: 0;
 }
+@media (max-width: 768px) {
+  .portfolio__foto:nth-child(4) {
+    margin-bottom: 2.5rem;
+  }
+}
 
 .portfolio__foto:nth-child(5) {
   margin-bottom: 0;
+}
+@media (max-width: 768px) {
+  .portfolio__foto:nth-child(5) {
+    margin-bottom: 2.5rem;
+  }
 }
 
 .portfolio__foto:nth-child(6) {
@@ -736,14 +796,37 @@ input:-webkit-autofill:active {
   position: relative;
 }
 
-.foto__wedding {
-  width: 1400px;
+.video__foto {
+  background: url(../assets/img/video-player.jpg) center no-repeat;
+  height: 70.5rem;
+  background-size: 1400px 705px;
+}
+@media (max-width: 768px) {
+  .video__foto {
+    height: 41.8rem;
+    background: url(../assets/img/video-player-tablet.jpg) center no-repeat;
+    background-position: -1px 0px;
+    background-size: auto 419px;
+  }
 }
 
 .video__button {
   position: absolute;
-  bottom: 287px;
+  bottom: 275px;
   left: 636px;
+}
+@media (max-width: 768px) {
+  .video__button > * {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .video__button {
+    width: 6.46rem;
+    height: 6.47rem;
+    bottom: 176px;
+    left: 350px;
+  }
 }
 
 .play-svg:hover .play-path {
@@ -753,13 +836,18 @@ input:-webkit-autofill:active {
 .price-block {
   padding: 0 0 100px;
 }
+@media (max-width: 768px) {
+  .price-block {
+    padding: 0 0 35px;
+  }
+}
 
 .price-item {
   border: 3px solid #bdae82;
 }
 
 .price-header {
-  margin: 43px auto 20px;
+  margin: 4rem auto 2rem;
 }
 
 span.price {
@@ -769,7 +857,7 @@ span.price {
   font-weight: bold;
   line-height: 4.8rem;
   color: #bdae82;
-  margin: 0 0 20px;
+  margin: 0 0 2.2rem;
 }
 
 .price__content {
