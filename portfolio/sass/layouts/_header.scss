@@ -10,6 +10,7 @@
     background: url('../assets/img/bg.jpg') center 0 no-repeat;
     background-size: 1440px 910px;
     @include media-tablet {
+        position: relative;
         padding-left: 60px;
         padding-right: 64px;
         background-position: -5px -30px;

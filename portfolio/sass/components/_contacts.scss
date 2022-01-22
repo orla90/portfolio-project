@@ -18,6 +18,11 @@
         height: 60rem;
         margin: 0 auto 0;
     }
+    @include media-big-mobile {
+        max-width: 15rem;
+        height: 60rem;
+        margin: 0 auto 0;
+    }
 }
 
 .contacts__line {

@@ -186,6 +186,15 @@ a {
     justify-content: space-between;
   }
 }
+@media (max-width: 414px) {
+  .portfolio__buttons {
+    min-width: 22.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
 @media (max-width: 768px) {
   .portfolio__buttons > * {
     margin: 0 0 0.6rem;
@@ -326,6 +335,11 @@ a.logo {
     width: 36.4rem;
   }
 }
+@media (max-width: 414px) {
+  .title-line {
+    width: 100%;
+  }
+}
 
 .section-title-contacts {
   font-size: 4rem;
@@ -410,6 +424,7 @@ a.logo {
 }
 @media (max-width: 768px) {
   .header__container {
+    position: relative;
     padding-left: 60px;
     padding-right: 64px;
     background-position: -5px -30px;
@@ -441,6 +456,18 @@ a.logo {
   }
   .skills-wrapper > * {
     flex-basis: 44.87%;
+  }
+}
+@media (max-width: 414px) {
+  .skills-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  .skills-wrapper > * {
+    flex-basis: 100%;
   }
 }
 
@@ -563,6 +590,13 @@ a.social__networks {
 }
 @media (max-width: 768px) {
   .contact-block {
+    height: 60rem;
+    margin: 0 auto 0;
+  }
+}
+@media (max-width: 414px) {
+  .contact-block {
+    max-width: 15rem;
     height: 60rem;
     margin: 0 auto 0;
   }
@@ -736,6 +770,11 @@ input:-webkit-autofill:active {
   text-align: center;
   color: #ffffff;
 }
+@media (max-width: 414px) {
+  .language-switcher {
+    margin-left: 20px;
+  }
+}
 
 .slash {
   padding: 0 0.8rem;
@@ -747,13 +786,33 @@ input:-webkit-autofill:active {
 }
 
 @media (max-width: 768px) {
-  .header__navigation {
-    display: none;
+  .nav-list {
+    position: absolute;
+    width: 62rem;
+    background-color: #000000;
+    flex-direction: column;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    padding: 134px 343px 0 127px;
+  }
+
+  a.nav-link {
+    display: flex;
+    flex-direction: column;
+    font-size: 3.5rem;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 7.3rem;
+  }
+
+  .nav__item {
+    padding: 0;
+    margin: 0 0 16px;
   }
 }
-
 @media (max-width: 768px) {
-  .skills__container {
+  .skills-wrapper {
     padding: 0 7.4rem 0 7rem;
   }
 }

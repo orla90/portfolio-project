@@ -53,6 +53,13 @@
         flex-wrap: wrap;
         justify-content: space-between;
     }
+    @include media-big-mobile {
+        min-width: 22.5rem;
+        margin-left: auto;
+        margin-right: auto;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
     >* {
         @include media-tablet {
             margin: 0 0 0.6rem;

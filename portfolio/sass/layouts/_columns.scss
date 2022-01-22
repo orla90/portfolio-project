@@ -7,6 +7,10 @@
         @include columns($width: 44.87%);
         flex-wrap: wrap;
     }
+    @include media-big-mobile {
+        @include columns($width: 100%);
+        flex-wrap: wrap;
+    }
 }
 
 .layout-3-columns {
