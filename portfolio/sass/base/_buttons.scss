@@ -35,6 +35,10 @@
 
 .contact__button {
     margin: 0 0 19.5rem;
+    @include media-tablet {
+        width: 22rem;
+        margin: 0 auto 0;
+    }
 }
 
 .portfolio__buttons {

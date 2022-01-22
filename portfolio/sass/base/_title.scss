@@ -58,5 +58,9 @@
     @include font($size: 4rem, $height: 8rem);
     display: table;
     color: $color-primary;
-    margin: 0 0 40px;
+    margin: 0 0 4rem;
+    @include media-tablet {
+        @include font($size: 3.2rem, $height: 6.4rem);
+        margin: 6rem auto 4rem;
+    }
 }

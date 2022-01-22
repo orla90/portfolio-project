@@ -2,19 +2,26 @@
     display: flex;
     justify-content: end;
     align-items: center;
-    background-image: url(../assets/img/contacts.jpg);
-    background-size: auto 700px;
-    background-position: center center;
-    background-repeat: no-repeat;
+    background: url(../assets/img/contacts.jpg) center no-repeat;
+    background-size: auto 70rem;
+    @include media-tablet {
+        height: 60rem;
+        background-position: -23.3rem -0.2rem;
+        background-size: auto 60rem;
+    }
 }
 
 .contact-block {
-    min-width: 450px;
-    margin: 60px 0 0;
+    max-width: 45rem;
+    margin: 6rem 0 0;
+    @include media-tablet {
+        height: 60rem;
+        margin: 0 auto 0;
+    }
 }
 
 .contacts__line {
-    margin: 0 0 20px;
+    margin: 0 0 2rem;
 }
 
 input:-webkit-autofill,
@@ -35,7 +42,7 @@ input:-webkit-autofill:active {
         padding: 0.3rem 0 0.3rem 2rem;
         transition: 180ms box-shadow ease-in-out;
         &:focus {
-            border: 2px solid $color-primary;
+            border: 0.2rem solid $color-primary;
             outline: none;
         }
 
@@ -45,8 +52,8 @@ input:-webkit-autofill:active {
     }
 
     .contacts__line:focus {
-        max-width: 448px;
-        box-shadow: 0 0 0 2px $color-primary;
+        max-width: 44.8rem;
+        box-shadow: 0 0 0 0.2rem $color-primary;
       }
 
     input::placeholder,
@@ -63,5 +70,8 @@ input:-webkit-autofill:active {
         margin: 0 0 2.4rem;
         @extend %font-primary;
         @include font($size: 2rem, $height: 4rem, $weight: normal);
+        @include media-tablet {
+            margin: 0 0 2rem;
+        }
     }
 }
