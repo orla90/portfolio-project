@@ -1,22 +1,23 @@
 @font-face {
   font-family: "Merriweather", serif;
-  src: url("../../assets/fonts/Merriweather/Merriweather-Bold.ttf");
+  src: url("../assets/fonts/Merriweather/Merriweather-Bold.ttf");
   font-weight: 700;
 }
 @font-face {
   font-family: "Inter", sans-serif;
-  src: url("../../assets/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf");
+  src: url("../assets/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf");
   font-weight: 400;
 }
 @font-face {
   font-family: "Inter", sans-serif;
-  src: url("../../assets/fonts/Inter/static/Inter-Bold.ttf");
+  src: url("../assets/fonts/Inter/static/Inter-Bold.ttf");
   font-weight: 700;
 }
 
 html {
   font-size: 10px;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -25,6 +26,7 @@ body {
   color: $color-text;
   margin: 0;
   @include font($size: 2rem, $height: 3.6rem, $weight: normal);
+  overflow-x: hidden;
 }
 
 * {

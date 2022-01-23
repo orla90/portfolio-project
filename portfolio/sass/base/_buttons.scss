@@ -6,7 +6,7 @@
     text-align: center;
     margin-left: 0.5rem;
     cursor: pointer;
-    transition: all .3s;
+    transition: all 0.3s;
     &_bordered {
         background: $color-background;
         border: 0.2rem solid $color-primary;
@@ -30,7 +30,7 @@
 .video__button {
     margin: 0 auto;
     cursor: pointer;
-    transition: all .3s;
+    transition: all 0.3s;
 }
 
 .contact__button {
@@ -60,7 +60,7 @@
         flex-wrap: wrap;
         justify-content: space-around;
     }
-    >* {
+    > * {
         @include media-tablet {
             margin: 0 0 0.6rem;
         }

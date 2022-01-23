@@ -1,6 +1,6 @@
 .section-title-block {
     width: 70rem;
-	position: relative;
+    position: relative;
     margin: 10rem auto 6rem;
     @include media-tablet {
         width: 36.4rem;
@@ -26,17 +26,17 @@
     color: $color-primary;
     background-color: $color-background;
     text-transform: capitalize;
-    position: relative; 
+    position: relative;
     z-index: 2;
     @include media-tablet {
         @include font($size: 3.2rem, $height: 8rem);
-      }
+    }
 }
 
 .skills-section-title {
     @include media-tablet {
         @include font($size: 3.2rem, $height: 4rem);
-      }
+    }
 }
 
 .portfolio-title {
@@ -50,7 +50,7 @@
     top: 50%;
     @include media-tablet {
         width: 36.4rem;
-      }
+    }
     @include media-big-mobile {
         width: 100%;
     }

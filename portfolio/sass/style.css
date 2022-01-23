@@ -13,22 +13,23 @@ span.price, .section-title-contacts, .section-title, h3, h2, h1 {
 
 @font-face {
   font-family: "Merriweather", serif;
-  src: url("../../assets/fonts/Merriweather/Merriweather-Bold.ttf");
+  src: url("../assets/fonts/Merriweather/Merriweather-Bold.ttf");
   font-weight: 700;
 }
 @font-face {
   font-family: "Inter", sans-serif;
-  src: url("../../assets/fonts/Inter/Inter-VariableFont_slnt,wght.ttf");
+  src: url("../assets/fonts/Inter/Inter-VariableFont_slnt,wght.ttf");
   font-weight: 400;
 }
 @font-face {
   font-family: "Inter", sans-serif;
-  src: url("../../assets/fonts/Inter/static/Inter-Bold.ttf");
+  src: url("../assets/fonts/Inter/static/Inter-Bold.ttf");
   font-weight: 700;
 }
 html {
   font-size: 10px;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -39,6 +40,7 @@ body {
   font-style: normal;
   font-weight: normal;
   line-height: 3.6rem;
+  overflow-x: hidden;
 }
 
 * {
@@ -362,8 +364,9 @@ a.logo {
 
 .hamburger__line, .hamburger:after, .hamburger:before {
   content: "";
-  display: inline-block;
+  display: flex;
   position: absolute;
+  z-index: 2;
   background: #ffffff;
   width: 100%;
   height: 3px;
@@ -373,7 +376,7 @@ a.logo {
   display: none;
   position: relative;
   width: 50px;
-  height: 28px;
+  height: 50px;
 }
 @media (max-width: 768px) {
   .hamburger {
@@ -381,17 +384,32 @@ a.logo {
   }
 }
 .hamburger:before {
-  top: 0;
+  width: 100%;
+  top: 12px;
   left: 0;
 }
 .hamburger:after {
-  bottom: 0;
+  width: 100%;
+  bottom: 9px;
   left: 0;
 }
 
 .hamburger__line {
-  top: calc(50% - 1.5px);
+  top: calc(50% + 0.5px);
   left: 0;
+  z-index: 15;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger.open .hamburger__line {
+  transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.hamburger.open:before {
+  transform: rotate(45deg) translate(11px, 10px);
+}
+.hamburger.open:after {
+  opacity: 0;
 }
 
 .container {
@@ -412,6 +430,7 @@ a.logo {
 }
 .header {
   padding: 20px 0;
+  position: relative;
 }
 
 .header__container {
@@ -596,7 +615,7 @@ a.social__networks {
 }
 @media (max-width: 414px) {
   .contact-block {
-    max-width: 15rem;
+    max-width: 22rem;
     height: 60rem;
     margin: 0 auto 0;
   }
@@ -614,7 +633,8 @@ input:-webkit-autofill:active {
   transition: background-color 0s ease-in-out 9000s;
 }
 
-.contact__form input, .contact__form textarea {
+.contact__form input,
+.contact__form textarea {
   width: 450px;
   color: #bdae82;
   font-size: 2rem;
@@ -626,12 +646,20 @@ input:-webkit-autofill:active {
   padding: 0.3rem 0 0.3rem 2rem;
   transition: 180ms box-shadow ease-in-out;
 }
-.contact__form input:focus, .contact__form textarea:focus {
+.contact__form input:focus,
+.contact__form textarea:focus {
   border: 0.2rem solid #bdae82;
   outline: none;
 }
-.contact__form input input, .contact__form textarea input {
+.contact__form input input,
+.contact__form textarea input {
   margin: 0 0 1.8rem;
+}
+@media (max-width: 414px) {
+  .contact__form input,
+.contact__form textarea {
+    width: auto;
+  }
 }
 .contact__form .contacts__line:focus {
   max-width: 44.8rem;
@@ -660,6 +688,15 @@ input:-webkit-autofill:active {
     margin: 0 0 2rem;
   }
 }
+@media (max-width: 414px) {
+  .contact__form textarea.contacts__line {
+    width: auto;
+  }
+}
+
+#hero.section.hero {
+  position: relative;
+}
 
 .hero__container {
   display: flex;
@@ -670,6 +707,8 @@ input:-webkit-autofill:active {
 }
 @media (max-width: 768px) {
   .hero__container {
+    position: relative;
+    z-index: 0;
     background-position: -5px -120px;
     background-size: auto 620px;
   }
@@ -681,6 +720,7 @@ input:-webkit-autofill:active {
 @media (max-width: 768px) {
   .hero__content {
     margin: 7.8rem 0 0 6rem;
+    position: relative;
   }
 }
 
@@ -788,13 +828,17 @@ input:-webkit-autofill:active {
 @media (max-width: 768px) {
   .nav-list {
     position: absolute;
-    width: 62rem;
+    top: 0;
+    right: -768px;
+    z-index: 2;
+    max-width: 62rem;
     background-color: #000000;
     flex-direction: column;
-    z-index: 2;
-    top: 0;
-    right: 0;
     padding: 134px 343px 0 127px;
+  }
+
+  .open {
+    right: 0;
   }
 
   a.nav-link {
@@ -809,6 +853,14 @@ input:-webkit-autofill:active {
   .nav__item {
     padding: 0;
     margin: 0 0 16px;
+  }
+}
+@media (max-width: 414px) {
+  .nav-list {
+    max-width: 22rem;
+    background-color: #000000;
+    flex-direction: column;
+    padding: 3rem 3rem 0;
   }
 }
 @media (max-width: 768px) {

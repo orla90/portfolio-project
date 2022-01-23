@@ -19,7 +19,7 @@
         margin: 0 auto 0;
     }
     @include media-big-mobile {
-        max-width: 15rem;
+        max-width: 22rem;
         height: 60rem;
         margin: 0 auto 0;
     }
@@ -33,16 +33,17 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-  -webkit-text-fill-color: $color-primary;
-  transition: background-color 0s ease-in-out 9000s;
+    -webkit-text-fill-color: $color-primary;
+    transition: background-color 0s ease-in-out 9000s;
 }
 
 .contact__form {
-    input, textarea {
+    input,
+    textarea {
         width: 450px;
         color: $color-primary;
         @include font($size: 2rem, $height: 4rem, $weight: normal);
-        background: rgba( 0,0,0,.5);
+        background: rgba(0, 0, 0, 0.5);
         border: 2px solid $color-primary;
         padding: 0.3rem 0 0.3rem 2rem;
         transition: 180ms box-shadow ease-in-out;
@@ -54,12 +55,15 @@ input:-webkit-autofill:active {
         input {
             margin: 0 0 1.8rem;
         }
+        @include media-big-mobile {
+            width: auto;
+        }
     }
 
     .contacts__line:focus {
         max-width: 44.8rem;
         box-shadow: 0 0 0 0.2rem $color-primary;
-      }
+    }
 
     input::placeholder,
     textarea::placeholder {
@@ -77,6 +81,9 @@ input:-webkit-autofill:active {
         @include font($size: 2rem, $height: 4rem, $weight: normal);
         @include media-tablet {
             margin: 0 0 2rem;
+        }
+        @include media-big-mobile {
+            width: auto;
         }
     }
 }

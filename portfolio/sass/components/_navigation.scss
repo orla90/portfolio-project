@@ -1,9 +1,6 @@
 .header__navigation {
     margin-left: auto;
     margin-right: 1.5rem;
-    // @include media-tablet {
-    //     display: none;
-    // }
 }
 
 .nav-list {
@@ -50,14 +47,19 @@
 @include media-tablet {
     .nav-list {
         position: absolute;
-        width: 62rem;
+        top: 0;
+        right: -768px;
+        z-index: 2;
+        max-width: 62rem;
         background-color: $color-background;
         flex-direction: column;
-        z-index: 2;
-        top: 0;
-        right: 0;
         padding: 134px 343px 0 127px;
     }
+
+    .open {
+        right: 0;
+    }
+
     a.nav-link {
         display: flex;
         flex-direction: column;
@@ -66,5 +68,14 @@
     .nav__item {
         padding: 0;
         margin: 0 0 16px;
+    }
+}
+
+@include media-big-mobile {
+    .nav-list {
+        max-width: 22rem;
+        background-color: $color-background;
+        flex-direction: column;
+        padding: 3rem 3rem 0;
     }
 }
