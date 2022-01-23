@@ -7,6 +7,9 @@
     justify-content: center;
     cursor: pointer;
     margin: 0 0 50px;
+    @include media-tablet {
+        margin: 0 0 30px;
+    }
 }
 
 .skills-icon {

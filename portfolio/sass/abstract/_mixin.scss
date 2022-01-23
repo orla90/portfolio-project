@@ -19,3 +19,18 @@
     width: $width;
 }
 
+@mixin media-desktop {
+    @media (max-width: $content-width) { @content; }
+}
+
+@mixin media-tablet {
+    @media (max-width: $tablet-width) { @content; }
+}
+
+@mixin media-big-mobile {
+    @media (max-width: $mobile-big-width) { @content; }
+}
+
+@mixin media-small-mobile {
+    @media (max-width: $mobile-small-width) { @content; }
+}

@@ -1,8 +1,13 @@
 .footer__container {
-    padding: 50px 20px;
+    padding: 5rem 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include media-tablet {
+        height: 19rem;
+        flex-direction: column;
+        padding: 2.8rem 0 3.97rem;
+    }
 }
 
 .footer__container a:hover {
@@ -20,12 +25,29 @@
     line-height: 0;
 }
 
+.footer-item span {
+    padding-right: 15px;
+    vertical-align: top;
+    @include media-tablet {
+        @include font($size: 2rem, $height: 2.4rem, $weight: normal);
+        padding-bottom: 1.6rem;
+    }
+} 
+
+.footer-item span:last-child {
+    padding-right: 0;
+} 
+
 a.social__networks {
     line-height: 0;
 }
 
 .icon-path {
     @extend %transition;
+}
+
+.icon-svg {
+    cursor: pointer;
 }
 
 .icon-svg:hover {

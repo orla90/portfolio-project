@@ -1,63 +1,95 @@
 @font-face {
-    font-family: "Merriweather", serif;
-    src: url("assets/fonts/Merriweather/Merriweather-Bold.ttf");
-    font-weight: 700;
-  }
-  @font-face {
-    font-family: "Inter", sans-serif;
-    src: url("assets/fonts/Inter/static/Inter-Regular.ttf");
-    font-weight: 400;
-  }
-  @font-face {
-    font-family: "Inter", sans-serif;
-    src: url("assets/fonts/Inter/static/Inter-Bold.ttf");
-    font-weight: 700;
-  }
-  
-  html {
-    font-size: 10px;
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    @extend %font-primary;
-    background-color: $color-background;
-    color: $color-text;
-    margin: 0;
-    @include font($size: 2rem, $height: 3.6rem, $weight: normal);
-  }
+  font-family: "Merriweather", serif;
+  src: url("../assets/fonts/Merriweather/Merriweather-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Inter", sans-serif;
+  src: url("../assets/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Inter", sans-serif;
+  src: url("../assets/fonts/Inter/static/Inter-Bold.ttf");
+  font-weight: 700;
+}
 
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
 
-  h1 {
-    @extend %font-add;
-    @include font($size: 6rem, $height: 12rem);
-  }
+body {
+  @extend %font-primary;
+  background-color: $color-background;
+  color: $color-text;
+  margin: 0;
+  @include font($size: 2rem, $height: 3.6rem, $weight: normal);
+  overflow-x: hidden;
+}
 
-  h2 {
-    @extend %font-add;
-    @include font($size: 4rem, $height: 8rem);
-  }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  h3 {
-    @extend %font-add;
-    @include font($size: 2.8rem, $height: 5.6rem);
-  }
+ul,
+ol,
+li {
+  list-style: none;
+}
 
-  h4 {
-    @include font($size: 2rem, $height: 4rem);
-  }
+img {
+  vertical-align: top;
+}
 
-  section, main, footer, header, article {
-    display: block;
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
 
-  a {
-    color: $color-text;
-    cursor: pointer;
-    text-decoration: none;
+h1 {
+  @extend %font-add;
+  @include font($size: 6rem, $height: 12rem);
+  @include media-tablet {
+    @include font($size: 3.2rem, $height: 6.4rem, $weight: normal);
+  }
+}
+
+h2 {
+  @extend %font-add;
+  @include font($size: 4rem, $height: 8rem);
+  @include media-tablet {
+    @include font($size: 3.2rem, $height: 4rem);
+  }
+}
+
+h3 {
+  @extend %font-add;
+  @include font($size: 2.8rem, $height: 5.6rem);
+}
+
+h4 {
+  @include font($size: 2rem, $height: 4rem);
+}
+
+section,
+main,
+footer,
+header,
+article {
+  display: block;
+}
+
+a {
+  color: $color-text;
+  cursor: pointer;
+  text-decoration: none;
 }

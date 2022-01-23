@@ -20,15 +20,62 @@
 
 .header__languages {
     display: flex;
+    @include font($size: 2rem, $height: 5rem, $weight: bold);
+    @include media-tablet {
+        margin-left: auto;
+        margin-right: 20px;
+    }
 }
 
 .language-switcher {
-font-style: normal;
-font-weight: bold;
-text-align: center;
-color: $color-text;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    color: $color-text;
+    @include media-big-mobile {
+        margin-left: 20px;
+    }
 }
 
 .slash {
     padding: 0 0.8rem;
+    @include media-tablet {
+        padding: 0 18px 0 9px;
+    }
+}
+
+@include media-tablet {
+    .nav-list {
+        position: absolute;
+        top: 0;
+        right: -768px;
+        z-index: 3;
+        transition: 0.5s;
+        max-width: 62rem;
+        height: 100vh;
+        background-color: $color-background;
+        flex-direction: column;
+        padding: 134px 343px 461px 127px;
+    }
+
+    .open {
+        right: 0;
+    }
+
+    a.nav-link {
+        display: flex;
+        flex-direction: column;
+        @include font($size: 3.5rem, $height: 7.3rem, $weight: normal);
+    }
+    .nav__item {
+        padding: 0;
+        margin: 0 0 16px;
+    }
+}
+
+@include media-big-mobile {
+    .nav-list {
+        padding: 134px 127px 461px 127px;
+        justify-content: center;
+    }
 }
