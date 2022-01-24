@@ -16,6 +16,12 @@
         background-position: -1px 0px;
         background-size: auto 419px;
     }
+    @include media-big-mobile {
+        background-position: -73px 0px;
+    }
+    @include media-small-mobile {
+        background-position: -125px 0px;
+    }
 }
 
 .video__button {
@@ -32,6 +38,12 @@
         height: 6.47rem;
         bottom: 176px;
         left: 350px;
+    }
+    @include media-big-mobile {
+        left: 173px;
+    }
+    @include media-small-mobile {
+        left: 125px;
     }
 }
 

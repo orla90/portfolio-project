@@ -529,6 +529,16 @@ a.logo {
     margin-bottom: 4.8rem;
   }
 }
+@media (max-width: 414px) {
+  .price-wrapper {
+    width: 32rem;
+  }
+}
+@media (max-width: 320px) {
+  .price-wrapper {
+    width: 24rem;
+  }
+}
 
 .footer__container {
   padding: 5rem 2rem;
@@ -658,7 +668,7 @@ input:-webkit-autofill:active {
 @media (max-width: 414px) {
   .contact__form input,
 .contact__form textarea {
-    width: auto;
+    width: 22rem;
   }
 }
 .contact__form .contacts__line:focus {
@@ -690,7 +700,7 @@ input:-webkit-autofill:active {
 }
 @media (max-width: 414px) {
   .contact__form textarea.contacts__line {
-    width: auto;
+    width: 22rem;
   }
 }
 
@@ -824,6 +834,11 @@ input:-webkit-autofill:active {
     padding: 0 18px 0 9px;
   }
 }
+@media (max-width: 320px) {
+  .slash {
+    padding: 0 5px 0 5px;
+  }
+}
 
 @media (max-width: 768px) {
   .nav-list {
@@ -924,6 +939,16 @@ input:-webkit-autofill:active {
   width: 45rem;
   margin-bottom: 2.5rem;
 }
+@media (max-width: 414px) {
+  .portfolio__foto {
+    width: 32rem;
+  }
+}
+@media (max-width: 320px) {
+  .portfolio__foto {
+    width: 25rem;
+  }
+}
 
 .portfolio__foto:nth-child(4) {
   margin-bottom: 0;
@@ -968,6 +993,16 @@ input:-webkit-autofill:active {
     background-size: auto 419px;
   }
 }
+@media (max-width: 414px) {
+  .video__foto {
+    background-position: -73px 0px;
+  }
+}
+@media (max-width: 320px) {
+  .video__foto {
+    background-position: -125px 0px;
+  }
+}
 
 .video__button {
   position: absolute;
@@ -985,6 +1020,16 @@ input:-webkit-autofill:active {
     height: 6.47rem;
     bottom: 176px;
     left: 350px;
+  }
+}
+@media (max-width: 414px) {
+  .video__button {
+    left: 173px;
+  }
+}
+@media (max-width: 320px) {
+  .video__button {
+    left: 125px;
   }
 }
 
