@@ -33,4 +33,10 @@
             margin-bottom: 4.8rem;
         }
     }
+    @include media-big-mobile {
+        width: 32rem;
+    }
+    @include media-small-mobile {
+        width: 24rem;
+    }
 }

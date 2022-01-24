@@ -14,6 +14,12 @@
 .portfolio__foto {
     width: 45rem;
     margin-bottom: 2.5rem;
+    @include media-big-mobile {
+        width: 32rem;
+    }
+    @include media-small-mobile {
+        width: 25rem;
+    }
 }
 
 .portfolio__foto:nth-child(4) {
