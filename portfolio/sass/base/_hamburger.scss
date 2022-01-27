@@ -30,6 +30,11 @@
     }
 }
 
+.header__hamburger:hover > * {
+    cursor: pointer;
+    background-color: $color-background;
+}
+
 .hamburger__line {
     @extend %hamburger-line;
     top: calc(50% + 0.5px);

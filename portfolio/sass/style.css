@@ -203,8 +203,18 @@ a {
   }
 }
 
-.portfolio__buttons button:hover {
+.portfolio__buttons .button:hover {
   background: #bdae82;
+}
+
+.portfolio__buttons .button.active {
+  background: #bdae82;
+  color: #000000;
+}
+
+.portfolio__buttons .button.active:hover {
+  background: #bdae82;
+  color: #ffffff;
 }
 
 .logo__container {
@@ -392,6 +402,11 @@ a.logo {
   width: 100%;
   bottom: 9px;
   left: 0;
+}
+
+.header__hamburger:hover > * {
+  cursor: pointer;
+  background-color: #000000;
 }
 
 .hamburger__line {

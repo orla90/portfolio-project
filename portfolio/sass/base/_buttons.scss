@@ -67,6 +67,16 @@
     }
 }
 
-.portfolio__buttons button:hover {
+.portfolio__buttons .button:hover {
     background: $color-primary;
+}
+
+.portfolio__buttons .button.active {
+    background: $color-primary;
+    color: $color-background;
+}
+
+.portfolio__buttons .button.active:hover {
+    background: $color-primary;
+    color: $color-text;
 }
