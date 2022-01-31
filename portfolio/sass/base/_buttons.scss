@@ -11,16 +11,28 @@
         background: $color-background;
         border: 0.2rem solid $color-primary;
         color: $color-primary;
+               
+        &.light-theme {
+            background: $color-primary;
+            color: $color-background;
+            border: 2px solid $color-primary;
+        }
     }
     &_colored {
         background: $color-primary;
         color: $color-background;
         border: 2px solid $color-primary;
+        &.light-theme {
+            background: $color-background;
+            border: 0.2rem solid $color-primary;
+            color: $color-primary;
+        }
     }
     &:hover {
         color: $color-text;
         @extend %transition;
     }
+
 }
 
 .button:first-child {
@@ -69,14 +81,47 @@
 
 .portfolio__buttons .button:hover {
     background: $color-primary;
+    &.light-theme {
+        background: $color-background;
+        color: $color-primary;
+    }
 }
 
 .portfolio__buttons .button.active {
     background: $color-primary;
     color: $color-background;
+    &.light-theme {
+        background-color: $color-background;
+        color: $color-primary;
+    }
 }
 
 .portfolio__buttons .button.active:hover {
     background: $color-primary;
     color: $color-text;
+}
+
+.light_btn {
+    background: $color-primary;
+    color: $color-background;
+    border: 2px solid $color-primary;  
+    &.light-theme {
+        background: $color-text;
+        color: $color-background;
+        &:hover {
+            background: $color-background;
+            color: $color-primary;
+        }
+    }    
+}
+
+.price_btn {
+    &.light-theme {
+        background: $color-primary;
+        color: $color-background;
+        &:hover {
+            background: $color-background;
+            color: $color-primary;
+        }
+    }    
 }

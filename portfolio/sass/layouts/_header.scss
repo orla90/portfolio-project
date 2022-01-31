@@ -17,6 +17,17 @@
         background-position: -5px -30px;
         background-size: auto 620px;
     }
+    &.light-theme {
+        background: url("../assets/img/bg_light.jpg") center 0 no-repeat;
+        background-size: 1440px 910px;
+        @include media-tablet {
+            position: relative;
+            padding-left: 60px;
+            padding-right: 64px;
+            background-position: -5px -30px;
+            background-size: auto 620px;
+        }
+    }
 }
 
 .header__container a:hover {

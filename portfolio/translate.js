@@ -92,9 +92,9 @@ const i18Obj = {
     document.querySelector('.header__languages').addEventListener('click', (e) => {
         let clickedLanguage = e.target;
         let lang = '';
-            if (clickedLanguage.innerText == 'ru') {
+            if (clickedLanguage.innerText === 'RU') {
                 lang = 'ru';
-            } else if (clickedLanguage.innerText === 'en') {
+            } else if (clickedLanguage.innerText === 'EN') {
                 lang = 'en'
             }
             getTranslate(lang);     

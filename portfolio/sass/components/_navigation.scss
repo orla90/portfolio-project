@@ -1,6 +1,6 @@
 .header__navigation {
     margin-left: auto;
-    margin-right: 1.5rem;
+    margin-right: 2.5rem;
 }
 
 .nav-list {
@@ -16,6 +16,9 @@
     &:hover {
         color: $color-primary;
     }
+    &.light-theme:hover {
+        color: $color-text;
+    }
 }
 
 .header__languages {
@@ -23,27 +26,56 @@
     @include font($size: 2rem, $height: 5rem, $weight: bold);
     @include media-tablet {
         margin-left: auto;
-        margin-right: 20px;
+        margin-right: 2rem;
+    }
+    @include media-big-mobile {
+        margin-right: 1rem;
     }
 }
+
+.language-switcher > a.active {
+    color: $color-text;
+}
+
+
+// .portfolio__buttons .button.active {
+//     background: $color-primary;
+//     color: $color-background;
+//     &.light-theme {
+//         background-color: $color-background;
+//         color: $color-primary;
+//     }
+// }
+
 
 .language-switcher {
     font-style: normal;
     font-weight: bold;
     text-align: center;
     color: $color-text;
+    text-transform: uppercase;
     @include media-big-mobile {
-        margin-left: 20px;
+        margin-left: 0;
+    }
+    &.light-theme {
+        color: $color-background;
+    }
+}
+
+.language-switcher.active a {
+    color: $color-primary;
+    &.light-theme {
+        color: $color-text;
     }
 }
 
 .slash {
-    padding: 0 0.8rem;
+    padding: 0 1rem;
     @include media-tablet {
-        padding: 0 18px 0 9px;
+        padding: 0 1.1rem;
     }
     @include media-small-mobile {
-        padding: 0 5px 0 5px;
+        padding: 0;
     }
 }
 
@@ -69,7 +101,7 @@
         display: flex;
         flex-direction: column;
         @include font($size: 3.5rem, $height: 7.3rem, $weight: normal);
-    }
+     }
     .nav__item {
         padding: 0;
         margin: 0 0 16px;

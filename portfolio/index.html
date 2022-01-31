@@ -37,6 +37,12 @@
                 <div class="slash">/</div>
                 <div class="language-switcher ru"><a href="#">ru</a></div>
             </div>
+            <div class="sun">
+                <img src="./assets/svg/carbon_sun.svg" alt="theme" class="sun-object">
+                <!-- <object data="./assets/svg/carbon_sun.svg" type="image/svg+xml" class="sun-object">
+                    Your browser does not support SVG
+                </object> -->
+            </div>
             <div class="header__hamburger">
                 <span class="hamburger">
                     <span class="hamburger__line"></span>
@@ -55,7 +61,7 @@
                         moments of life
                         together with professional photographer Alexa Rise</p>
                     <div class="hero__button">
-                        <button class="button button_colored" data-i18="hire">Hire me</button>
+                        <button class="button light_btn " data-i18="hire">Hire me</button>
                     </div>
                 </div>
             </div>
@@ -64,9 +70,10 @@
         <section class="section skills" id="skills">
             <div class="container skills__container">
                 <div class="skills-block">
-                    <div class="section-title-block skills-title">
-                        <h2 class="section-title skills-section-title" data-i18="skills">skills</h2>
-                        <img src="assets/img/section-title-line.png" alt="title-line" class="title-line">
+                    <div class="gradient-container">
+                        <div class="section-title-block skills-title">
+                            <h2 class="section-title skills-section-title" data-i18="skills">skills</h2>
+                        </div>
                     </div>
                     <div class="layout-4-columns skills-wrapper">
                         <div class="skills-item">
@@ -118,10 +125,12 @@
         <section class="section portfolio" id="portfolio">
             <div class="container portfolio__container">
                 <div class="portfolio-block">
-                    <div class="section-title-block portfolio-title">
-                        <h2 class="section-title" data-i18="portfolio">portfolio</h2>
-                        <img src="assets/img/section-title-line.png" alt="title-line" class="title-line">
+                    <div class="gradient-container">
+                        <div class="section-title-block portfolio-title">
+                            <h2 class="section-title" data-i18="portfolio">portfolio</h2>
+                        </div>
                     </div>
+
                     <div class="portfolio__buttons">
                         <button class="button button_bordered winter_button" data-i18="winter">Winter</button>
                         <button class="button button_bordered spring_button" data-i18="spring">Spring</button>
@@ -143,9 +152,10 @@
         <section class="section video" id="video">
             <div class="container video__container">
                 <div class="video-block">
-                    <div class="section-title-block video-title">
-                        <h2 class="section-title" data-i18="video">video</h2>
-                        <img src="assets/img/section-title-line.png" alt="title-line" class="title-line">
+                    <div class="gradient-container">
+                        <div class="section-title-block video-title">
+                            <h2 class="section-title" data-i18="video">video</h2>
+                        </div>
                     </div>
                     <div class="video__foto"></div>
                     <div class="video__button">
@@ -160,9 +170,10 @@
         <section class="section price" id="price">
             <div class="container price__container">
                 <div class="price-block">
-                    <div class="section-title-block">
-                        <h2 class="section-title" data-i18="price">price</h2>
-                        <img src="assets/img/section-title-line.png" alt="title-line" class="title-line">
+                    <div class="gradient-container">
+                        <div class="section-title-block">
+                            <h2 class="section-title" data-i18="price">price</h2>
+                        </div>
                     </div>
                     <div class="layout-3-columns price-wrapper">
                         <div class="price-item">
@@ -174,7 +185,7 @@
                             <p class="price__content" data-i18="price-description-1-span-4">Readiness 2-3 weeks</p>
                             <p class="price__content" data-i18="price-description-1-span-5">Make up, visage</p>
                             <div class="price__button">
-                                <button class="button button_colored" data-i18="order">Order shooting</button>
+                                <button class="button button_colored price_btn" data-i18="order">Order shooting</button>
                             </div>
                         </div>
                         <div class="price-item">
@@ -186,7 +197,7 @@
                             <p class="price__content" data-i18="price-description-2-span-4">Readiness 1-2 weeks</p>
                             <p class="price__content" data-i18="price-description-2-span-5">Make up, visage</p>
                             <div class="price__button">
-                                <button class="button button_colored" data-i18="order">Order shooting</button>
+                                <button class="button button_colored price_btn" data-i18="order">Order shooting</button>
                             </div>
                         </div>
                         <div class="price-item">
@@ -199,7 +210,7 @@
                             <p class="price__content" data-i18="price-description-3-span-5">Make up, visage, hairstyle
                             </p>
                             <div class="price__button">
-                                <button class="button button_colored" data-i18="order">Order shooting</button>
+                                <button class="button button_colored price_btn" data-i18="order">Order shooting</button>
                             </div>
                         </div>
                     </div>
@@ -213,15 +224,18 @@
                     <div class="contact__form">
                         <form action="/" method="post">
                             <h2 class="section-title-contacts" data-i18="contact-me">Contact me</h2>
-                            <input type="email" name="email" id="email" placeholder="E-mail" class="contacts__line" data-i18="e-mail">
+                            <input type="email" name="email" id="email" placeholder="E-mail" class="contacts__line"
+                                data-i18="e-mail">
                             <br>
-                            <input type="tel" name="phone" id="phone" placeholder="Phone" class="contacts__line" data-i18="phone">
+                            <input type="tel" name="phone" id="phone" placeholder="Phone" class="contacts__line"
+                                data-i18="phone">
                             <br>
-                            <textarea name="message" id="message" class="contacts__line"
-                                placeholder="Message" data-i18="message"></textarea>
+                            <textarea name="message" id="message" class="contacts__line" placeholder="Message"
+                                data-i18="message"></textarea>
                             <br>
                             <div class="contact__button">
-                                <button type="submit" class="button button_colored" data-i18="send-message">Send
+                                <button type="submit" class="button light_btn"
+                                    data-i18="send-message">Send
                                     message</button>
                             </div>
                         </form>
@@ -266,7 +280,7 @@
         </div>
     </footer>
 
-    <script type="module" src="index.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>

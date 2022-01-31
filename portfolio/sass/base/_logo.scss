@@ -17,6 +17,12 @@ a.logo {
 
 .logo-svg {
     cursor: pointer;
+    .logo-path {
+        fill: $color-text;
+        &.light-theme .logo{
+            fill: $color-background;
+        }
+    }
 }
 
 .logo-svg:hover {
