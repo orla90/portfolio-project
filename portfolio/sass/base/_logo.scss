@@ -19,11 +19,21 @@ a.logo {
     cursor: pointer;
     .logo-path {
         fill: $color-text;
-        &.light-theme .logo{
-            fill: $color-background;
-        }
     }
 }
+
+.logo-svg .light-theme{
+    cursor: pointer;
+    .logo-path {
+        fill: $color-background;
+    }
+}
+
+// &.light-theme {
+    //         .logo-path {
+    //             fill: $color-background;
+    //         }
+    //     }
 
 .logo-svg:hover {
     .logo-path {
@@ -31,6 +41,3 @@ a.logo {
     }
 }
 
-.logo-object {
-    cursor: pointer;
-}

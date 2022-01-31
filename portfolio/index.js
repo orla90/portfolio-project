@@ -197,7 +197,7 @@ preloadImages();
 
 
 //light theme
-const lightThemeTags = ['body', '.header__container', '.logo-svg', '.nav__item', '.language-switcher', 'a', '.hero__container', '.section-title', 'light_btn', 'price_btn', '.gradient-container', '.price__content', 'input', 'textarea', '::placeholder', '.contacts__container', '.section-title-contacts', '.button', '.portfolio__buttons',
+const lightThemeTags = ['body', '.header__container', '.logo-svg', '.nav__item', '.language-switcher', 'a', '.hero__container', '.section-title', 'light_btn', 'price_btn', '.gradient-container', '.price__content', 'input', 'textarea', '::placeholder', '.contacts__container', '.section-title-contacts', '.button', '.portfolio__buttons', 'svg', 
 ];
 
 const themeIcon = document.querySelector('.sun');
@@ -221,13 +221,14 @@ let theme = 'dark';
 function setLocalStorage() {
     localStorage.setItem('lang', lang);
     localStorage.setItem('theme', theme);
+    localStorage.setItem('langActive', langActive);
 }
 window.addEventListener('beforeunload', setLocalStorage);
 
 function getLocalStorage() {
     if (localStorage.getItem('lang')) {
         const lang = localStorage.getItem('lang');
-        getTranslate(lang);
+        getTranslate(lang);        
     }
     if (localStorage.getItem('theme')) {
         const theme = localStorage.getItem('theme');

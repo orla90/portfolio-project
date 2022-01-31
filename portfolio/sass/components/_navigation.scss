@@ -8,7 +8,7 @@
     @include font($size: 2rem, $height: 5rem, $weight: normal);
 }
 
-.nav__item {
+.nav__item a{
     list-style: none;
     text-transform: capitalize;
     padding: 0 1.5rem;
@@ -64,6 +64,12 @@
 
 .language-switcher.active a {
     color: $color-primary;
+    &.light-theme {
+        color: $color-text;
+    }
+}
+
+.language-switcher:hover a {
     &.light-theme {
         color: $color-text;
     }

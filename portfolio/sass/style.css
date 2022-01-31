@@ -1,4 +1,4 @@
-.play-path, .nav__item, .icon-path, .footer__container a:hover, .header__container a:hover, .sun-object:hover, .sun-path, .logo-path, .button:hover {
+.play-path, .nav__item a, .icon-path, .footer__container a:hover, .header__container a:hover, .sun-object:hover, .sun-path, .logo-path, .button:hover {
   transition: all 0.3s ease-out;
 }
 
@@ -132,11 +132,9 @@ a {
 a.light-theme {
   color: #000000;
 }
-a.light-theme:hover {
-  color: #ffffff;
-}
 
 .button {
+  position: relative;
   width: 22rem;
   padding: 0.5rem 0;
   font-size: 2rem;
@@ -170,6 +168,38 @@ a.light-theme:hover {
 }
 .button:hover {
   color: #ffffff;
+}
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border: 1px solid rgba(20, 18, 18, 0.527);
+  transition: all 0.3s;
+}
+.button:hover::before {
+  opacity: 0;
+  transform: scale(0.5, 0.5);
+}
+.button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 95%;
+  height: 90%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.5s;
+  border: 5px solid rgba(100, 90, 90, 0.5);
+  transform: scale(1.4, 1.4);
+}
+.button:hover::after {
+  opacity: 1;
+  transform: scale(1, 1);
 }
 
 .button:first-child {
@@ -286,16 +316,16 @@ a.logo {
 .logo-svg .logo-path {
   fill: #ffffff;
 }
-.logo-svg .logo-path.light-theme .logo {
+
+.logo-svg .light-theme {
+  cursor: pointer;
+}
+.logo-svg .light-theme .logo-path {
   fill: #000000;
 }
 
 .logo-svg:hover .logo-path {
   fill: #bdae82;
-}
-
-.logo-object {
-  cursor: pointer;
 }
 
 .ico {
@@ -941,15 +971,15 @@ input:-webkit-autofill:active {
   line-height: 5rem;
 }
 
-.nav__item {
+.nav__item a {
   list-style: none;
   text-transform: capitalize;
   padding: 0 1.5rem;
 }
-.nav__item:hover {
+.nav__item a:hover {
   color: #bdae82;
 }
-.nav__item.light-theme:hover {
+.nav__item a.light-theme:hover {
   color: #ffffff;
 }
 
@@ -996,6 +1026,10 @@ input:-webkit-autofill:active {
   color: #bdae82;
 }
 .language-switcher.active a.light-theme {
+  color: #ffffff;
+}
+
+.language-switcher:hover a.light-theme {
   color: #ffffff;
 }
 
