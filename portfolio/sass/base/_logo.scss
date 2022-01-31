@@ -11,7 +11,8 @@ a.logo {
     line-height: 0;
 }
 
-.logo-path {
+.logo-path,
+.logo-path_light {
     @extend %transition;
 }
 
@@ -22,18 +23,22 @@ a.logo {
     }
 }
 
-.logo-svg .light-theme{
+.logo-svg_light {
     cursor: pointer;
-    .logo-path {
-        fill: $color-background;
+}
+
+.logo-svg_light:hover {
+    .logo-path_light {
+        fill: $color-text;
     }
 }
 
-// &.light-theme {
-    //         .logo-path {
-    //             fill: $color-background;
-    //         }
-    //     }
+
+.logo_dark {
+    &.light-theme {
+        display: none;
+    }
+}
 
 .logo-svg:hover {
     .logo-path {
@@ -41,3 +46,9 @@ a.logo {
     }
 }
 
+.logo_light {
+    display: none;
+    &.light-theme {
+        display: block;
+    }
+}

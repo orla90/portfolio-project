@@ -1,4 +1,6 @@
-.play-path, .nav__item a, .icon-path, .footer__container a:hover, .header__container a:hover, .sun-object:hover, .sun-path, .logo-path, .button:hover {
+.play-path, .nav__item a, .icon-path, .footer__container a:hover, .header__container a:hover, .sun-object:hover, .sun-path,
+.moon-path, .logo-path,
+.logo-path_light, .button:hover {
   transition: all 0.3s ease-out;
 }
 
@@ -317,15 +319,27 @@ a.logo {
   fill: #ffffff;
 }
 
-.logo-svg .light-theme {
+.logo-svg_light {
   cursor: pointer;
 }
-.logo-svg .light-theme .logo-path {
-  fill: #000000;
+
+.logo-svg_light:hover .logo-path_light {
+  fill: #ffffff;
+}
+
+.logo_dark.light-theme {
+  display: none;
 }
 
 .logo-svg:hover .logo-path {
   fill: #bdae82;
+}
+
+.logo_light {
+  display: none;
+}
+.logo_light.light-theme {
+  display: block;
 }
 
 .ico {
@@ -541,12 +555,42 @@ a.logo {
     margin: 0 1rem 0 0;
   }
 }
+.sun.light-theme {
+  display: none;
+}
+
+.moon {
+  display: none;
+  width: 4.5rem;
+  height: 4.5rem;
+  margin-left: 3.5rem;
+}
+@media (max-width: 768px) {
+  .moon {
+    margin: 0 3rem 0 1rem;
+  }
+}
+@media (max-width: 414px) {
+  .moon {
+    margin: 0 1rem 0 0;
+  }
+}
+.moon.light-theme {
+  display: block;
+}
+
+.moon-svg:hover .moon-path {
+  fill: #ffffff;
+}
 
 .sun-object {
   cursor: pointer;
 }
 .sun-object:hover {
   filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+}
+.sun-object:hover.light-theme {
+  filter: invert(99%) sepia(0%) saturate(441%) hue-rotate(357deg) brightness(124%) contrast(100%);
 }
 
 .container {
@@ -718,12 +762,14 @@ a.logo {
   line-height: 0;
 }
 
-.footer-item span {
+.footer-item span,
+.networks-light span {
   padding-right: 15px;
   vertical-align: top;
 }
 @media (max-width: 768px) {
-  .footer-item span {
+  .footer-item span,
+.networks-light span {
     font-size: 2rem;
     font-style: normal;
     font-weight: normal;
@@ -746,6 +792,17 @@ a.social__networks {
 
 .icon-svg:hover .icon-path {
   fill: #bdae82;
+}
+
+.networks-light {
+  display: none;
+}
+.networks-light.light-theme {
+  display: flex;
+}
+
+.networks-dark.light-theme {
+  display: none;
 }
 
 .contacts__container {
@@ -831,6 +888,10 @@ input:-webkit-autofill:active {
 .contact__form textarea input {
   margin: 0 0 1.8rem;
 }
+.contact__form input input.light-theme,
+.contact__form textarea input.light-theme {
+  color: #000000;
+}
 @media (max-width: 414px) {
   .contact__form input,
 .contact__form textarea {
@@ -845,6 +906,9 @@ input:-webkit-autofill:active {
   line-height: 4rem;
 }
 .contact__form ::placeholder.light-theme {
+  color: #000000;
+}
+.contact__form input.light-theme::placeholder {
   color: #000000;
 }
 .contact__form .contacts__line:focus {

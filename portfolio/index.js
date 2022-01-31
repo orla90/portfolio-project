@@ -197,10 +197,11 @@ preloadImages();
 
 
 //light theme
-const lightThemeTags = ['body', '.header__container', '.logo-svg', '.nav__item', '.language-switcher', 'a', '.hero__container', '.section-title', 'light_btn', 'price_btn', '.gradient-container', '.price__content', 'input', 'textarea', '::placeholder', '.contacts__container', '.section-title-contacts', '.button', '.portfolio__buttons', 'svg', 
+const lightThemeTags = ['body', '.header__container', '.logo-svg', '.nav__item', '.language-switcher', 'a', '.hero__container', '.section-title', 'light_btn', 'price_btn', '.gradient-container', '.price__content', 'input', 'textarea', '::placeholder', '.contacts__container', '.section-title-contacts', '.button', '.portfolio__buttons', '.moon', '.sun', '.networks-light', '.networks-dark', '.sun-object'
 ];
 
-const themeIcon = document.querySelector('.sun');
+const themeIconSun = document.querySelector('.sun');
+const themeIconMoon = document.querySelector('.moon');
 
 function toggleTheme() {
     lightThemeTags.forEach((el) => {
@@ -212,7 +213,8 @@ function toggleTheme() {
     });
 }
 
-themeIcon.addEventListener('click', toggleTheme);
+themeIconSun.addEventListener('click', toggleTheme);
+themeIconMoon.addEventListener('click', toggleTheme);
 
 //local storage
 let lang = 'en';
@@ -232,7 +234,7 @@ function getLocalStorage() {
     }
     if (localStorage.getItem('theme')) {
         const theme = localStorage.getItem('theme');
-        toggleTheme();
+        toggleTheme(theme);
     }
 }
 window.addEventListener('load', getLocalStorage);

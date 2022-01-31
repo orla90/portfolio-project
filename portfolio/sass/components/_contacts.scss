@@ -68,6 +68,9 @@ input:-webkit-autofill:active {
 
         input {
             margin: 0 0 1.8rem;
+            &.light-theme {
+                color: $color-background;
+            }
         }
 
         @include media-big-mobile {
@@ -82,6 +85,10 @@ input:-webkit-autofill:active {
         &.light-theme {
             color: $color-background;
         }
+    }
+
+    input.light-theme::placeholder {
+        color: $color-background;
     }
 
     .contacts__line:focus {
