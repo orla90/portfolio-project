@@ -1,4 +1,5 @@
 .button {
+    position: relative;
     @extend %font-primary;
     width: 22rem;
     padding: 0.5rem 0;
@@ -11,16 +12,61 @@
         background: $color-background;
         border: 0.2rem solid $color-primary;
         color: $color-primary;
+               
+        &.light-theme {
+            background: $color-primary;
+            color: $color-background;
+            border: 2px solid $color-primary;
+        }
     }
     &_colored {
         background: $color-primary;
         color: $color-background;
         border: 2px solid $color-primary;
+        &.light-theme {
+            background: $color-background;
+            border: 0.2rem solid $color-primary;
+            color: $color-primary;
+        }
     }
     &:hover {
         color: $color-text;
         @extend %transition;
     }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        border: 1px solid rgba(20, 18, 18, 0.527);
+        transition: all 0.3s;
+      }
+      &:hover::before {
+        opacity: 0 ;
+        transform: scale(0.5,0.5);
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 95%;
+        height: 90%;
+        z-index: 1;
+        opacity: 0;
+        transition: all 0.5s;
+        border: 5px solid rgba(100, 90, 90, 0.5);
+        transform: scale(1.4,1.4);
+      }
+      &:hover::after {
+        opacity: 1;
+        transform: scale(1,1);
+      }
+
 }
 
 .button:first-child {
@@ -67,6 +113,49 @@
     }
 }
 
-.portfolio__buttons button:hover {
+.portfolio__buttons .button:hover {
     background: $color-primary;
+    &.light-theme {
+        background: $color-background;
+        color: $color-primary;
+    }
+}
+
+.portfolio__buttons .button.active {
+    background: $color-primary;
+    color: $color-background;
+    &.light-theme {
+        background-color: $color-background;
+        color: $color-primary;
+    }
+}
+
+.portfolio__buttons .button.active:hover {
+    background: $color-primary;
+    color: $color-text;
+}
+
+.light_btn {
+    background: $color-primary;
+    color: $color-background;
+    border: 2px solid $color-primary;  
+    &.light-theme {
+        background: $color-text;
+        color: $color-background;
+        &:hover {
+            background: $color-background;
+            color: $color-primary;
+        }
+    }    
+}
+
+.price_btn {
+    &.light-theme {
+        background: $color-primary;
+        color: $color-background;
+        &:hover {
+            background: $color-background;
+            color: $color-primary;
+        }
+    }    
 }

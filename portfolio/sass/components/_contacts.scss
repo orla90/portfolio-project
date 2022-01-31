@@ -9,7 +9,17 @@
         background-position: -23.3rem -0.2rem;
         background-size: auto 60rem;
     }
+    &.light-theme {
+        background: url("../assets/img/contacts_light.jpg") center no-repeat;
+        background-size: auto 70rem;
+        @include media-tablet {
+            height: 60rem;
+            background-position: -23.3rem -0.2rem;
+            background-size: auto 60rem;
+        }
+    }
 }
+
 
 .contact-block {
     max-width: 45rem;
@@ -47,6 +57,10 @@ input:-webkit-autofill:active {
         border: 2px solid $color-primary;
         padding: 0.3rem 0 0.3rem 2rem;
         transition: 180ms box-shadow ease-in-out;
+        &.light-theme {
+            background: rgba(255, 255, 255, 0.5);
+            color: $color-background;
+        }
         &:focus {
             border: 0.2rem solid $color-primary;
             outline: none;
@@ -54,6 +68,9 @@ input:-webkit-autofill:active {
 
         input {
             margin: 0 0 1.8rem;
+            &.light-theme {
+                color: $color-background;
+            }
         }
 
         @include media-big-mobile {
@@ -61,16 +78,22 @@ input:-webkit-autofill:active {
         }
     }
 
-    .contacts__line:focus {
-        max-width: 44.8rem;
-        box-shadow: 0 0 0 0.2rem $color-primary;
-    }
-
-    input::placeholder,
-    textarea::placeholder {
+    ::placeholder {
         color: $color-primary;
         @extend %font-primary;
         @include font($size: 2rem, $height: 4rem, $weight: normal);
+        &.light-theme {
+            color: $color-background;
+        }
+    }
+
+    input.light-theme::placeholder {
+        color: $color-background;
+    }
+
+    .contacts__line:focus {
+        max-width: 44.8rem;
+        box-shadow: 0 0 0 0.2rem $color-primary;
     }
 
     textarea.contacts__line {

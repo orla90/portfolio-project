@@ -11,12 +11,33 @@ a.logo {
     line-height: 0;
 }
 
-.logo-path {
+.logo-path,
+.logo-path_light {
     @extend %transition;
 }
 
 .logo-svg {
     cursor: pointer;
+    .logo-path {
+        fill: $color-text;
+    }
+}
+
+.logo-svg_light {
+    cursor: pointer;
+}
+
+.logo-svg_light:hover {
+    .logo-path_light {
+        fill: $color-text;
+    }
+}
+
+
+.logo_dark {
+    &.light-theme {
+        display: none;
+    }
 }
 
 .logo-svg:hover {
@@ -25,6 +46,9 @@ a.logo {
     }
 }
 
-.logo-object {
-    cursor: pointer;
+.logo_light {
+    display: none;
+    &.light-theme {
+        display: block;
+    }
 }

@@ -23,9 +23,11 @@
     width: 188px;
     font-size: 0;
     line-height: 0;
+
 }
 
-.footer-item span {
+.footer-item span,
+.networks-light span {
     padding-right: 15px;
     vertical-align: top;
     @include media-tablet {
@@ -53,5 +55,18 @@ a.social__networks {
 .icon-svg:hover {
     .icon-path {
         fill: $color-primary;
+    }
+}
+
+.networks-light {
+    display: none;
+    &.light-theme {
+        display: flex;
+    }
+}
+
+.networks-dark {
+    &.light-theme {
+        display: none;
     }
 }

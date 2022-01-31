@@ -24,6 +24,9 @@ span.price {
 .price__content {
     @include font($size: 1.8rem, $height: 3.6rem, $weight: normal);
     color: $color-text;
+    &.light-theme {
+        color: $color-background;
+    }
 }
 
 .price__button {
