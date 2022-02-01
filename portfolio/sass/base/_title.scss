@@ -2,15 +2,7 @@
     position: relative;
     margin: 10rem auto 6rem;
     @include media-tablet {
-        width: 36.4rem;
         margin: 8rem auto 5rem;
-    }
-}
-
-.section-title-block.skills-title {
-    @include media-tablet {
-        width: 36.4rem;
-        margin: 8rem auto 4.5rem;
     }
 }
 
@@ -58,18 +50,6 @@
 .portfolio-title {
     @include media-tablet {
         margin-top: 8.5rem;
-    }
-}
-
-.title-line {
-    background: url('../assets/img/section-title-line.png') center 0 no-repeat;
-    position: absolute;
-    top: 50%;
-    @include media-tablet {
-        width: 36.4rem;
-    }
-    @include media-big-mobile {
-        width: 100%;
     }
 }
 
