@@ -481,9 +481,21 @@ a.logo {
   display: flex;
   position: absolute;
   z-index: 4;
-  background: #ffffff;
   width: 100%;
   height: 3px;
+}
+
+.hamburger.light-theme:before {
+  background: #000000;
+}
+.hamburger.light-theme:after {
+  background: #000000;
+}
+
+.hamburger:hover:before,
+.hamburger:hover:after,
+.hamburger span:hover {
+  background-color: #bdae82;
 }
 
 .hamburger {
@@ -498,26 +510,41 @@ a.logo {
   }
 }
 .hamburger:before {
+  background: #ffffff;
   width: 100%;
   top: 12px;
   left: 0;
 }
 .hamburger:after {
+  background: #ffffff;
   width: 100%;
   bottom: 9px;
   left: 0;
 }
 
+.hamburger.light-theme:before {
+  color: #000000;
+}
+
 .header__hamburger:hover > * {
   cursor: pointer;
-  background-color: #000000;
 }
 
 .hamburger__line {
+  background: #ffffff;
   top: calc(50% + 0.5px);
   left: 0;
   z-index: 15;
   transition: all 0.3s ease-in-out;
+}
+.hamburger__line.light-theme {
+  background: #000000;
+}
+
+.hamburger:before {
+  width: 100%;
+  top: 12px;
+  left: 0;
 }
 
 .hamburger.open .hamburger__line {
@@ -1111,6 +1138,21 @@ input:-webkit-autofill:active {
 }
 
 @media (max-width: 768px) {
+  .nav-list .light-theme {
+    background: #ffffff;
+  }
+}
+.nav-list.open.light-theme {
+  background: #ffffff;
+  color: #000000;
+}
+
+@media (max-width: 768px) {
+  .nav-list.open .light-theme {
+    background: #ffffff;
+    color: #000000;
+  }
+
   .nav-list {
     position: absolute;
     top: 0;

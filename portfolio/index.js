@@ -197,8 +197,7 @@ preloadImages();
 
 
 //light theme
-const lightThemeTags = ['body', '.header__container', '.logo-svg', '.nav__item', '.language-switcher', 'a', '.hero__container', '.section-title', 'light_btn', 'price_btn', '.gradient-container', '.price__content', 'input', 'textarea', '::placeholder', '.contacts__container', '.section-title-contacts', '.button', '.portfolio__buttons', '.moon', '.sun', '.networks-light', '.networks-dark', '.sun-object'
-];
+const lightThemeTags = ['body', '.header__container', '.logo-svg', '.nav__item', '.language-switcher', 'a', '.hero__container', '.section-title', 'light_btn', 'price_btn', '.gradient-container', '.price__content', 'input', 'textarea', '::placeholder', '.contacts__container', '.section-title-contacts', '.button', '.portfolio__buttons', '.moon', '.sun', '.networks-light', '.networks-dark', '.sun-object', '.hamburger', '.hamburger__line', '.nav-list'];
 
 const themeIconSun = document.querySelector('.sun');
 const themeIconMoon = document.querySelector('.moon');

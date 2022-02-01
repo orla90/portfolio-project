@@ -37,17 +37,6 @@
     color: $color-text;
 }
 
-
-// .portfolio__buttons .button.active {
-//     background: $color-primary;
-//     color: $color-background;
-//     &.light-theme {
-//         background-color: $color-background;
-//         color: $color-primary;
-//     }
-// }
-
-
 .language-switcher {
     font-style: normal;
     font-weight: bold;
@@ -85,7 +74,23 @@
     }
 }
 
-@include media-tablet {
+@include media-tablet {  
+    .nav-list .light-theme {
+        background: $color-text;
+    }
+}
+
+.nav-list.open.light-theme {
+    background: $color-text;
+    color: $color-background;
+}
+
+@include media-tablet {  
+    .nav-list.open .light-theme {
+        background: $color-text;
+        color: $color-background;
+    }
+
     .nav-list {
         position: absolute;
         top: 0;
@@ -96,7 +101,7 @@
         height: 100vh;
         background-color: $color-background;
         flex-direction: column;
-        padding: 134px 343px 461px 127px;
+        padding: 134px 343px 461px 127px;     
     }
 
     .open {
