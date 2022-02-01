@@ -384,15 +384,7 @@ a.logo {
 }
 @media (max-width: 768px) {
   .section-title-block {
-    width: 36.4rem;
     margin: 8rem auto 5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .section-title-block.skills-title {
-    width: 36.4rem;
-    margin: 8rem auto 4.5rem;
   }
 }
 
@@ -435,22 +427,6 @@ a.logo {
 @media (max-width: 768px) {
   .portfolio-title {
     margin-top: 8.5rem;
-  }
-}
-
-.title-line {
-  background: url("../assets/img/section-title-line.png") center 0 no-repeat;
-  position: absolute;
-  top: 50%;
-}
-@media (max-width: 768px) {
-  .title-line {
-    width: 36.4rem;
-  }
-}
-@media (max-width: 414px) {
-  .title-line {
-    width: 100%;
   }
 }
 
