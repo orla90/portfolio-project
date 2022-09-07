@@ -1,23 +1,31 @@
 {
-  "name": "package.json",
+  "name": "portfolio",
   "version": "1.0.0",
-  "description": "Private repository for @orla90",
-  "main": "index.js",
+  "description": "",
+  "main": "webpack.config.js",
   "scripts": {
-    "style": "sass --watch sass/style.scss sass/style.css",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack --watch --config ./webpack.config.js --env mode=dev",
+    "serve": "webpack-dev-server",
+    "build": "webpack --config ./webpack.config.js --env mode=prod"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rolling-scopes-school/orla90-JSFEPRESCHOOL.git"
-  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/rolling-scopes-school/orla90-JSFEPRESCHOOL/issues"
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.1",
+    "file-loader": "^6.2.0",
+    "html-loader": "^4.1.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.1",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
   },
-  "homepage": "https://github.com/rolling-scopes-school/orla90-JSFEPRESCHOOL#readme",
   "dependencies": {
-    "normalize-scss": "^7.0.1"
+    "normalize-scss": "^7.0.1",
+    "sass": "^1.54.8",
+    "sass-loader": "^13.0.2",
+    "style-loader": "^3.3.1"
   }
 }
