@@ -1,63 +1,107 @@
 const path = require('path');
 const { merge } = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 const baseConfig = {
-  entry: [path.resolve(__dirname, './src/index.js'), path.resolve(__dirname, './src/sass/style.scss')],
+  entry: [
+    path.resolve(__dirname, './src/index.js'),
+    path.resolve(__dirname, './src/sass/style.scss'),
+  ],
   mode: 'development',
+
   module: {
     rules: [
       {
-        test: /\.scss$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+        test: /\.html$/i,
+        loader: 'html-loader',
       },
       {
         test: /\.tsx?$/,
         use: 'ts-loader',
-        include: [path.resolve(__dirname, 'src')],
         exclude: /node_modules/,
       },
       {
-        test: /\.(?:ico|gif|jpg|jpeg)$/i,
+        test: /\.(sa|sc|c)ss$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [
+                  [
+                    'postcss-preset-env',
+
+                    {
+                      //options
+                    },
+                  ],
+                ],
+              },
+            },
+          },
+          'sass-loader',
+        ],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif|json)$/i,
         type: 'asset/resource',
+
+        generator: {
+          filename: (name) => {
+            const path = name.filename.split('/').slice(1, -1).join('/');
+            return `${path}/[name][ext][query]`;
+          },
+        },
       },
       {
-        test: /\.(?:woff(2)|png|eot|ttf|otf|svg)$/i,
-        type: 'asset/inline',
-      },
-      {
-        test: /\.html$/i,
-        loader: "html-loader",
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
       },
     ],
   },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
+  },
   resolve: {
-    extensions: ['.ts', '.js'],
+    extensions: ['.tsx', '.ts', '.js'],
   },
   output: {
-    filename: 'index.js',
-    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].js',
+    path: path.resolve(__dirname, './dist'),
+    assetModuleFilename: 'assets/[name][ext][query]',
+    clean: true,
   },
+
   plugins: [
-    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, './src/index.html'),
       filename: 'index.html',
     }),
     new MiniCssExtractPlugin({
-      filename: "style.css"
+      filename: 'style.css',
+    }),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, 'src/assets/'),
+          to: path.resolve(__dirname, 'dist/assets/'),
+        },
+      ],
     }),
   ],
-  experiments: {
-    topLevelAwait: true
-  }
 };
 
 module.exports = ({ mode }) => {
   const isProductionMode = mode === 'prod';
-  const envConfig = isProductionMode ? require('./webpack.prod.config') : require('./webpack.dev.config');
+  const envConfig = isProductionMode
+    ? require('./webpack.prod.config')
+    : require('./webpack.dev.config');
 
   return merge(baseConfig, envConfig);
 };

@@ -1,30 +1,47 @@
-.play-path, .nav__item a, .icon-path, .footer__container a:hover, .header__container a:hover, .sun-object:hover, .sun-path,
-.moon-path, .logo-path,
-.logo-path_light, .button:hover {
+.play-path,
+.nav__item a,
+.icon-path,
+.footer__container a:hover,
+.header__container a:hover,
+.sun-object:hover,
+.sun-path,
+.moon-path,
+.logo-path,
+.logo-path_light,
+.button:hover {
   transition: all 0.3s ease-out;
 }
 
-.hero__description, .contact__form textarea.contacts__line, .contact__form ::placeholder, .button, body {
-  font-family: "Inter", Verdana, sans-serif;
+.hero__description,
+.contact__form textarea.contacts__line,
+.contact__form ::placeholder,
+.button,
+body {
+  font-family: 'Inter', Verdana, sans-serif;
 }
 
-span.price, .section-title-contacts, .section-title, h3, h2, h1 {
-  font-family: "Merriweather", Verdana, sans-serif;
+span.price,
+.section-title-contacts,
+.section-title,
+h3,
+h2,
+h1 {
+  font-family: 'Merriweather', Verdana, sans-serif;
 }
 
 @font-face {
-  font-family: "Merriweather", serif;
-  src: url("../assets/fonts/Merriweather/Merriweather-Bold.ttf");
+  font-family: 'Merriweather', serif;
+  src: url('../assets/fonts/Merriweather/Merriweather-Bold.ttf');
   font-weight: 700;
 }
 @font-face {
-  font-family: "Inter", sans-serif;
-  src: url("../assets/fonts/Inter/Inter-VariableFont_slnt,wght.ttf");
+  font-family: 'Inter', sans-serif;
+  src: url('../assets/fonts/Inter/Inter-VariableFont_slnt,wght.ttf');
   font-weight: 400;
 }
 @font-face {
-  font-family: "Inter", sans-serif;
-  src: url("../assets/fonts/Inter/static/Inter-Bold.ttf");
+  font-family: 'Inter', sans-serif;
+  src: url('../assets/fonts/Inter/static/Inter-Bold.ttf');
   font-weight: 700;
 }
 html {
@@ -360,10 +377,22 @@ a.logo {
 .gradient-container {
   width: 50%;
   margin: 0 auto;
-  background-image: linear-gradient(to top, #000000 39px, #bdae82 39px, #bdae82 41px, #000000 41px);
+  background-image: linear-gradient(
+    to top,
+    #000000 39px,
+    #bdae82 39px,
+    #bdae82 41px,
+    #000000 41px
+  );
 }
 .gradient-container.light-theme {
-  background-image: linear-gradient(to top, #ffffff 39px, #000000 39px, #000000 41px, #ffffff 41px);
+  background-image: linear-gradient(
+    to top,
+    #ffffff 39px,
+    #000000 39px,
+    #000000 41px,
+    #ffffff 41px
+  );
 }
 
 .section-title {
@@ -421,8 +450,10 @@ a.logo {
   color: #000000;
 }
 
-.hamburger__line, .hamburger:after, .hamburger:before {
-  content: "";
+.hamburger__line,
+.hamburger:after,
+.hamburger:before {
+  content: '';
   display: flex;
   position: absolute;
   z-index: 4;
@@ -558,10 +589,12 @@ a.logo {
   cursor: pointer;
 }
 .sun-object:hover {
-  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
 }
 .sun-object:hover.light-theme {
-  filter: invert(99%) sepia(0%) saturate(441%) hue-rotate(357deg) brightness(124%) contrast(100%);
+  filter: invert(99%) sepia(0%) saturate(441%) hue-rotate(357deg)
+    brightness(124%) contrast(100%);
 }
 
 .container {
@@ -590,7 +623,7 @@ a.logo {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: url("../assets/img/bg.jpg") center 0 no-repeat;
+  background: url('../assets/img/bg.jpg') center 0 no-repeat;
   background-size: 1440px 910px;
 }
 @media (max-width: 768px) {
@@ -603,7 +636,7 @@ a.logo {
   }
 }
 .header__container.light-theme {
-  background: url("../assets/img/bg_light.jpg") center 0 no-repeat;
+  background: url('../assets/img/bg_light.jpg') center 0 no-repeat;
   background-size: 1440px 910px;
 }
 @media (max-width: 768px) {
@@ -740,7 +773,7 @@ a.logo {
 }
 @media (max-width: 768px) {
   .footer-item span,
-.networks-light span {
+  .networks-light span {
     font-size: 2rem;
     font-style: normal;
     font-weight: normal;
@@ -791,7 +824,7 @@ a.social__networks {
   }
 }
 .contacts__container.light-theme {
-  background: url("../assets/img/contacts_light.jpg") center no-repeat;
+  background: url('../assets/img/contacts_light.jpg') center no-repeat;
   background-size: auto 70rem;
 }
 @media (max-width: 768px) {
@@ -865,7 +898,7 @@ input:-webkit-autofill:active {
 }
 @media (max-width: 414px) {
   .contact__form input,
-.contact__form textarea {
+  .contact__form textarea {
     width: 22rem;
   }
 }
@@ -915,7 +948,7 @@ input:-webkit-autofill:active {
   display: flex;
   justify-content: start;
   align-items: center;
-  background: url("../assets/img/bg.jpg") center -90px no-repeat;
+  background: url('../assets/img/bg.jpg') center -90px no-repeat;
   background-size: 1440px 910px;
 }
 @media (max-width: 768px) {
@@ -927,7 +960,7 @@ input:-webkit-autofill:active {
   }
 }
 .hero__container.light-theme {
-  background: url("../assets/img/bg_light.jpg") center -90px no-repeat;
+  background: url('../assets/img/bg_light.jpg') center -90px no-repeat;
   background-size: 1440px 910px;
 }
 @media (max-width: 768px) {
@@ -1206,6 +1239,7 @@ input:-webkit-autofill:active {
 .portfolio__foto:nth-child(4) {
   margin-bottom: 0;
 }
+
 @media (max-width: 768px) {
   .portfolio__foto:nth-child(4) {
     margin-bottom: 2.5rem;

@@ -1,54 +1,45 @@
 .logo__container {
-    width: 5rem;
-    height: 4rem;
+  width: 5rem;
+  height: 4rem;
 }
 
 .logo {
-    width: 5rem;
+  width: 5rem;
+  cursor: pointer;
 }
 
 a.logo {
-    line-height: 0;
+  line-height: 0;
 }
 
 .logo-path,
 .logo-path_light {
-    @extend %transition;
+  @extend %transition;
 }
-
-.logo-svg {
-    cursor: pointer;
-    .logo-path {
-        fill: $color-text;
-    }
-}
-
-.logo-svg_light {
-    cursor: pointer;
-}
-
-.logo-svg_light:hover {
-    .logo-path_light {
-        fill: $color-text;
-    }
-}
-
 
 .logo_dark {
-    &.light-theme {
-        display: none;
-    }
-}
-
-.logo-svg:hover {
-    .logo-path {
-        fill: $color-primary;
-    }
+  background: url(../assets/svg/logo.svg) center no-repeat;
+  height: 5rem;
+  background-size: contain;
+  &.light-theme {
+    display: none;
+  }
+  &:hover {
+    filter: invert(72%) sepia(25%) saturate(379%) hue-rotate(7deg)
+      brightness(200%) contrast(95%);
+  }
 }
 
 .logo_light {
-    display: none;
-    &.light-theme {
-        display: block;
-    }
+  display: none;
+  background: url(../assets/svg/logo_light.svg) center no-repeat;
+  height: 5rem;
+  background-size: contain;
+  &.light-theme {
+    display: block;
+  }
+  &:hover {
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(236deg)
+      brightness(110%) contrast(104%);
+  }
 }
