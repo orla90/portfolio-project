@@ -1,0 +1,112 @@
+.contacts__container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: url(../assets/img/contacts.jpg) center no-repeat;
+  background-size: auto 70rem;
+  @include media-tablet {
+    height: 60rem;
+    background-position: -23.3rem -0.2rem;
+    background-size: auto 60rem;
+  }
+  &.light-theme {
+    background: url('../assets/img/contacts_light.jpg') center no-repeat;
+    background-size: auto 70rem;
+    @include media-tablet {
+      height: 60rem;
+      background-position: -23.3rem -0.2rem;
+      background-size: auto 60rem;
+    }
+  }
+}
+
+.contact-block {
+  max-width: 45rem;
+  margin: 6rem 0 0;
+  @include media-tablet {
+    height: 60rem;
+    margin: 0 auto 0;
+  }
+  @include media-big-mobile {
+    max-width: 22rem;
+    height: 60rem;
+    margin: 0 auto 0;
+  }
+}
+
+.contacts__line {
+  margin: 0 0 2rem;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-text-fill-color: $color-primary;
+  transition: background-color 0s ease-in-out 9000s;
+}
+
+.contact__form {
+  input,
+  textarea {
+    width: 450px;
+    color: $color-primary;
+    @include font($size: 2rem, $height: 4rem, $weight: normal);
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid $color-primary;
+    padding: 0.3rem 0 0.3rem 2rem;
+    transition: 180ms box-shadow ease-in-out;
+    &.light-theme {
+      background: rgba(255, 255, 255, 0.5);
+      color: $color-background;
+    }
+    &:focus {
+      border: 0.2rem solid $color-primary;
+      outline: none;
+    }
+
+    input {
+      margin: 0 0 1.8rem;
+      &.light-theme {
+        color: $color-background;
+      }
+    }
+
+    @include media-big-mobile {
+      width: 22rem;
+    }
+  }
+
+  ::placeholder {
+    color: $color-primary;
+    @extend %font-primary;
+    @include font($size: 2rem, $height: 4rem, $weight: normal);
+    &.light-theme {
+      color: $color-background;
+    }
+  }
+
+  input.light-theme::placeholder {
+    color: $color-background;
+  }
+
+  .contacts__line:focus {
+    max-width: 44.8rem;
+    box-shadow: 0 0 0 0.2rem $color-primary;
+  }
+
+  textarea.contacts__line {
+    resize: none;
+    height: 100px;
+    width: 450px;
+    margin: 0 0 2.4rem;
+    @extend %font-primary;
+    @include font($size: 2rem, $height: 4rem, $weight: normal);
+    @include media-tablet {
+      margin: 0 0 2rem;
+    }
+    @include media-big-mobile {
+      width: 22rem;
+    }
+  }
+}

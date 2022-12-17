@@ -1,0 +1,46 @@
+.video {
+  overflow: hidden;
+}
+
+.video__foto {
+  background: url(../assets/img/video-player.jpg) center no-repeat;
+  height: 70.5rem;
+  background-size: 1400px 705px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include media-tablet {
+    height: 41.8rem;
+    background: url(../assets/img/video-player-tablet.jpg) center no-repeat;
+    background-position: -1px 0px;
+    background-size: auto 419px;
+  }
+  @include media-big-mobile {
+    background-position: -73px 0px;
+  }
+  @include media-small-mobile {
+    background-position: -125px 0px;
+  }
+}
+
+.video__button {
+  > * {
+    @include media-big-tablet {
+      width: 100%;
+    }
+  }
+  @include media-tablet {
+    width: 6.46rem;
+    height: 6.47rem;
+  }
+}
+
+.play-path {
+  @extend %transition;
+}
+
+.play-svg:hover {
+  .play-path {
+    fill: $color-primary;
+  }
+}
