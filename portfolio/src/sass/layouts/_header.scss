@@ -1,36 +1,44 @@
 .header {
-    padding: 20px 0;
-    position: relative;
+  padding: 20px 0;
+  position: relative;
 }
 
 .header__container {
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: url("../assets/img/bg.jpg") center 0 no-repeat;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: url('../assets/img/bg.jpg') center 0 no-repeat;
+  background-size: 1440px 910px;
+  @include media-tablet {
+    position: relative;
+    padding-left: 60px;
+    padding-right: 64px;
+    background-position: -5px -30px;
+    background-size: auto 620px;
+  }
+  &.light-theme {
+    background: url('../assets/img/bg_light.jpg') center 0 no-repeat;
     background-size: 1440px 910px;
     @include media-tablet {
-        position: relative;
-        padding-left: 60px;
-        padding-right: 64px;
-        background-position: -5px -30px;
-        background-size: auto 620px;
+      position: relative;
+      padding-left: 60px;
+      padding-right: 64px;
+      background-position: -5px -30px;
+      background-size: auto 620px;
     }
-    &.light-theme {
-        background: url("../assets/img/bg_light.jpg") center 0 no-repeat;
-        background-size: 1440px 910px;
-        @include media-tablet {
-            position: relative;
-            padding-left: 60px;
-            padding-right: 64px;
-            background-position: -5px -30px;
-            background-size: auto 620px;
-        }
-    }
+  }
+  @include media-small-tablet {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  @include media-small-mobile {
+    padding-left: 35px;
+    padding-right: 20px;
+  }
 }
 
 .header__container a:hover {
-    color: $color-primary;
-    @extend %transition;
+  color: $color-primary;
+  @extend %transition;
 }

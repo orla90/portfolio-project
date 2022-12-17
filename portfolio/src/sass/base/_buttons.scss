@@ -1,13 +1,13 @@
 .button {
   position: relative;
   @extend %font-primary;
+  @extend %transition;
   width: 22rem;
   padding: 0.5rem 0;
   @include font($size: 2rem, $height: 4rem, $weight: normal);
   text-align: center;
   margin-left: 0.5rem;
   cursor: pointer;
-  transition: all 0.3s;
   &_bordered {
     background: $color-background;
     border: 0.2rem solid $color-primary;
@@ -42,7 +42,7 @@
 .video__button {
   margin: 0 auto;
   cursor: pointer;
-  transition: all 0.3s;
+  @extend %transition;
   background: url(../assets/svg/Play_hover.svg) center no-repeat;
   height: 13rem;
   width: 13rem;
