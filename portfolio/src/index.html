@@ -205,8 +205,16 @@
                 <h2 class="section-title" data-i18="video">video</h2>
               </div>
             </div>
-            <div class="video__foto">
-              <div class="video__button"></div>
+            <div class="video__player">
+              <div class="video__foto"></div>
+              <video src="assets/video/video.mp4" class="video__video"></video>
+              <button class="video__button"></button>
+              <div class="video__controls">
+                <div class="video__player-icon video__player-icon_play toggle" title='Toggle Play'></div>
+                <input type='range' name='progress' class="video__slider video__slider_progress" min="0" max="100" step="1" value="0"></input>
+                <div class="video__player-icon video__player-icon_volume volume" title='Volume'></div>
+                <input type='range' name='volume' class="video__slider video__slider_volume"  min="0" max="100" step="1" value="40"></input>
+              </div>
             </div>
           </div>
         </div>

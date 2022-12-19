@@ -47,6 +47,9 @@
   height: 13rem;
   width: 13rem;
   background-size: contain;
+  &_hidden {
+    display: none;
+  }
   &:hover {
     filter: invert(72%) sepia(25%) saturate(379%) hue-rotate(7deg)
       brightness(200%) contrast(95%);

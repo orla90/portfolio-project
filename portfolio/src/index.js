@@ -1,7 +1,7 @@
 import { i18Obj } from '../src/utils/translate.js';
 import { lightThemeTags } from '../src/utils/light-theme.js';
 
-//theme
+/* handle theme switch */
 const themeIconSun = document.querySelector('.sun');
 const themeIconMoon = document.querySelector('.moon');
 let theme = localStorage.getItem('theme')
@@ -42,7 +42,7 @@ themeIconMoon.addEventListener('click', () => {
   }
 });
 
-//language
+/* handle language switch */
 const languageSwitcher = document.querySelectorAll(
   '.header__languages .language-switcher'
 );
@@ -109,7 +109,7 @@ const changeLanguageClassActive = () => {
   el.addEventListener('click', changeLanguageClassActive, false);
 });
 
-//local storage
+/* handle local storage */
 const setLocalStorage = () => {
   localStorage.setItem('lang', lang);
   localStorage.setItem('theme', theme);
@@ -132,7 +132,7 @@ window.addEventListener('load', () => {
   addLanguageSwitcherHandler();
 });
 
-//hamburger
+/* handle hamburger menu */
 const hamburger = document.querySelector('.hamburger');
 const navList = document.querySelector('.nav-list');
 const navLinks = document.querySelectorAll('.nav-link');
@@ -153,7 +153,7 @@ const closeMenu = (event) => {
 
 navLinks.forEach((el) => el.addEventListener('click', closeMenu));
 
-// portfolio
+/* handle portfolio photos */
 const portfolioBtn = document.querySelectorAll('.portfolio__buttons > button');
 const portfolioWinterBtn = document.querySelector(
   '.portfolio__buttons .winter_button'
@@ -213,4 +213,156 @@ portfolioAutumnBtn.addEventListener('click', () => {
     (img, index) =>
       (img.style.backgroundImage = `url(assets/img/autumn/${index + 1}.jpg)`)
   );
+});
+
+/* handle video */
+const videoBlock = document.getElementsByClassName('video__player')[0];
+const video = document.getElementsByClassName('video__video')[0];
+const videoBtn = videoBlock.getElementsByClassName('video__button')[0];
+const videoPoster = videoBlock.getElementsByClassName('video__foto')[0];
+const toggle = videoBlock.getElementsByClassName('toggle')[0];
+const volume = videoBlock.getElementsByClassName('volume')[0];
+const progressInput = videoBlock.getElementsByClassName(
+  'video__slider_progress'
+)[0];
+const volumeInput = videoBlock.getElementsByClassName(
+  'video__slider_volume'
+)[0];
+let tempVolume;
+
+const togglePlay = () => {
+  const method = video.paused ? 'play' : 'pause';
+  video[method]();
+};
+
+const handleBigPlayBtn = () => {
+  if (video.paused && videoBtn.classList.contains('video__button_hidden')) {
+    videoBtn.classList.remove('video__button_hidden');
+  } else if (
+    !video.paused &&
+    !videoBtn.classList.contains('video__button_hidden')
+  ) {
+    videoBtn.classList.add('video__button_hidden');
+  }
+};
+
+const handleSmallPlayBtn = () => {
+  if (
+    !video.paused &&
+    toggle.classList.contains('video__player-icon_play') &&
+    !toggle.classList.contains('video__player-icon_paused')
+  ) {
+    toggle.classList.remove('video__player-icon_play');
+    toggle.classList.add('video__player-icon_pause');
+  } else if (
+    video.paused &&
+    !toggle.classList.contains('video__player-icon_play') &&
+    !toggle.classList.contains('video__player-icon_paused')
+  ) {
+    toggle.classList.remove('video__player-icon_pause');
+    toggle.classList.add('video__player-icon_play');
+  }
+};
+
+const handleVolumeBtn = () => {
+  if (
+    volume.classList.contains('video__player-icon_volume') &&
+    !volume.classList.contains('video__player-icon_mute')
+  ) {
+    tempVolume = video.volume;
+    video.volume = 0;
+    volumeInput.background = `linear-gradient(to right, #bdae82 0%, #bdae82 ${video.volume}%, #b3b3b3 ${video.volume}%, #b3b3b3 100%)`;
+    mute();
+  } else if (
+    !volume.classList.contains('video__player-icon_volume') &&
+    volume.classList.contains('video__player-icon_mute')
+  ) {
+    video.volume = tempVolume;
+    unmute();
+  }
+};
+
+const unmute = () => {
+  volume.classList.remove('video__player-icon_mute');
+  volume.classList.add('video__player-icon_volume');
+};
+
+const mute = () => {
+  volume.classList.remove('video__player-icon_volume');
+  volume.classList.add('video__player-icon_mute');
+};
+
+const handlePlayBtns = () => {
+  togglePlay();
+  handleBigPlayBtn();
+  handleSmallPlayBtn();
+};
+
+videoBtn.addEventListener('click', () => {
+  if (!videoPoster.classList.contains('video__foto_hidden')) {
+    videoPoster.classList.add('video__foto_hidden');
+  }
+  handlePlayBtns();
+  setVolume();
+});
+
+video.addEventListener('click', () => {
+  handlePlayBtns();
+});
+
+toggle.addEventListener('click', () => {
+  handlePlayBtns();
+});
+
+volume.addEventListener('click', () => {
+  handleVolumeBtn();
+});
+
+const scrubVideoDuration = (e) => {
+  const scrubTime = (e.offsetX / progressInput.offsetWidth) * video.duration;
+  video.currentTime = scrubTime;
+};
+
+const handleProgress = () => {
+  const percent = (video.currentTime / video.duration) * 100;
+  progressInput.value = `${percent}`;
+  progressInput.style.background = `linear-gradient(to right, #bdae82 0%, #bdae82 ${
+    percent + 1
+  }%, #b3b3b3 ${percent + 1}%, #b3b3b3 100%)`;
+};
+
+const handleVolume = () => {
+  const soundIntencityProcent = video.volume * 100;
+  if (soundIntencityProcent === 0) {
+    mute();
+  } else {
+    unmute();
+  }
+  volumeInput.value = `${soundIntencityProcent}`;
+  volumeInput.style.background = `linear-gradient(to right, #bdae82 0%, #bdae82 ${soundIntencityProcent}%, #b3b3b3 ${soundIntencityProcent}%, #b3b3b3 100%)`;
+};
+
+const setVolume = () => {
+  const defaultVolume = 0.4;
+  video.volume = defaultVolume;
+  volumeInput.style.background = `linear-gradient(to right, #bdae82 0%, #bdae82 ${
+    defaultVolume * 100
+  }%, #b3b3b3 ${defaultVolume * 100}%, #b3b3b3 100%)`;
+};
+
+video.addEventListener('timeupdate', handleProgress);
+
+video.addEventListener('volumechange', handleVolume);
+
+progressInput.addEventListener('click', scrubVideoDuration);
+
+progressInput.addEventListener('input', function () {
+  const value = this.value;
+  this.style.background = `linear-gradient(to right, #bdae82 0%, #bdae82 ${value}%, #b3b3b3 ${value}%, #b3b3b3 100%)`;
+});
+
+volumeInput.addEventListener('input', function () {
+  const valuePercent = this.value;
+  video.volume = valuePercent / 100;
+  this.style.background = `linear-gradient(to right, #bdae82 0%, #bdae82 ${valuePercent}%, #b3b3b3 ${valuePercent}%, #b3b3b3 100%)`;
 });
