@@ -1,0 +1,63 @@
+.sun-path,
+.moon-path {
+    @extend %transition;
+}
+
+.sun-svg {
+    cursor: pointer;
+}
+
+.sun-svg:hover {
+    .sun-path {
+        fill: $color-primary;
+    }
+}
+
+.sun {
+    width: 4.5rem;
+    height: 4.5rem;
+    margin-left: 3.5rem;
+    @include media-tablet {
+        margin: 0 3rem 0 1rem;
+    }
+    @include media-big-mobile {
+        margin: 0 1rem 0 0;
+    }
+    &.light-theme {
+        display: none;
+    }
+}
+
+.moon {
+    display: none;
+    width: 4.5rem;
+    height: 4.5rem;
+    margin-left: 3.5rem;
+    @include media-tablet {
+        margin: 0 3rem 0 1rem;
+    }
+    @include media-big-mobile {
+        margin: 0 1rem 0 0;
+    }
+    &.light-theme {
+        display: block;
+    }
+}
+
+.moon-svg:hover {
+    .moon-path {
+        fill: $color-text;
+    }
+}
+
+.sun-object {
+    cursor: pointer;
+    &:hover {
+        @extend %transition;
+        filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+        contrast(87%);
+        &.light-theme {
+           filter: invert(99%) sepia(0%) saturate(441%) hue-rotate(357deg) brightness(124%) contrast(100%);
+        }
+    }
+} 

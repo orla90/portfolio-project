@@ -1,0 +1,57 @@
+.portfolio__content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-wrap: wrap;
+  > * {
+    @include media-big-tablet {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+.portfolio__foto {
+  min-width: 45rem;
+  min-height: 56rem;
+  margin-bottom: 2.5rem;
+  @extend %transition;
+  @include media-big-mobile {
+    min-width: 32rem;
+  }
+}
+
+.portfolio__foto:nth-child(4) {
+  @include media-tablet {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.portfolio__foto:nth-child(5) {
+  @include media-tablet {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.portfolio__foto_1 {
+  background: url(../assets/img/autumn/1.jpg) center no-repeat;
+}
+
+.portfolio__foto_2 {
+  background: url(../assets/img/autumn/2.jpg) center no-repeat;
+}
+
+.portfolio__foto_3 {
+  background: url(../assets/img/autumn/3.jpg) center no-repeat;
+}
+
+.portfolio__foto_4 {
+  background: url(../assets/img/autumn/4.jpg) center no-repeat;
+}
+
+.portfolio__foto_5 {
+  background: url(../assets/img/autumn/5.jpg) center no-repeat;
+}
+
+.portfolio__foto_6 {
+  background: url(../assets/img/autumn/6.jpg) center no-repeat;
+}
