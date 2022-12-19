@@ -1,0 +1,37 @@
+.ico {
+    cursor: pointer;
+    width: 66px;
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 0 0 50px;
+    @include media-tablet {
+        margin: 0 0 30px;
+    }
+}
+
+.skills-icon {
+
+    &_camera {
+        background-image: url(../assets/svg/camera.svg);
+        width: 61.84px;
+        height: 50px;
+    }
+    &_video {
+        background-image: url(../assets/svg/video.svg);
+        width: 60px;
+        height: 50px;
+    }
+    &_retouch {
+        background-image: url(../assets/svg/image.svg);
+        width: 66px;
+        height: 50px;
+    }
+    &_audio {
+        background-image: url(../assets/svg/mic.svg);
+        width: 32px;
+        height: 50px;
+    }
+}

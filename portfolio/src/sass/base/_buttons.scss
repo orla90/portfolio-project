@@ -1,0 +1,138 @@
+.button {
+  position: relative;
+  @extend %font-primary;
+  @extend %transition;
+  width: 22rem;
+  padding: 0.5rem 0;
+  @include font($size: 2rem, $height: 4rem, $weight: normal);
+  text-align: center;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  &_bordered {
+    background: $color-background;
+    border: 0.2rem solid $color-primary;
+    color: $color-primary;
+
+    &.light-theme {
+      background: $color-primary;
+      color: $color-background;
+      border: 2px solid $color-primary;
+    }
+  }
+  &_colored {
+    background: $color-primary;
+    color: $color-background;
+    border: 2px solid $color-primary;
+    &.light-theme {
+      background: $color-background;
+      border: 0.2rem solid $color-primary;
+      color: $color-primary;
+    }
+  }
+  &:hover {
+    color: $color-text;
+    @extend %transition;
+  }
+}
+
+.button:first-child {
+  margin-left: 0;
+}
+
+.video__button {
+  margin: 0 auto;
+  cursor: pointer;
+  @extend %transition;
+  background: url(../assets/svg/Play_hover.svg) center no-repeat;
+  height: 13rem;
+  width: 13rem;
+  background-size: contain;
+  &_hidden {
+    display: none;
+  }
+  &:hover {
+    filter: invert(72%) sepia(25%) saturate(379%) hue-rotate(7deg)
+      brightness(200%) contrast(95%);
+  }
+}
+
+.contact__button {
+  margin: 0 0 19.5rem;
+  @include media-tablet {
+    width: 22rem;
+    margin: 0 auto 0;
+  }
+}
+
+.portfolio__buttons {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 6rem;
+  @include media-tablet {
+    margin-bottom: 5.5rem;
+    max-width: 44.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  @include media-big-mobile {
+    min-width: 22.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  > * {
+    @include media-tablet {
+      margin: 0 0 0.6rem;
+    }
+  }
+}
+
+.portfolio__buttons .button:hover {
+  background: $color-primary;
+  &.light-theme {
+    background: $color-background;
+    color: $color-primary;
+  }
+}
+
+.portfolio__buttons .button.active {
+  background: $color-primary;
+  color: $color-background;
+  &.light-theme {
+    background-color: $color-background;
+    color: $color-primary;
+  }
+}
+
+.portfolio__buttons .button.active:hover {
+  background: $color-primary;
+  color: $color-text;
+}
+
+.light_btn {
+  background: $color-primary;
+  color: $color-background;
+  border: 2px solid $color-primary;
+  &.light-theme {
+    background: $color-text;
+    color: $color-background;
+    &:hover {
+      background: $color-background;
+      color: $color-primary;
+    }
+  }
+}
+
+.price_btn {
+  &.light-theme {
+    background: $color-primary;
+    color: $color-background;
+    &:hover {
+      background: $color-background;
+      color: $color-primary;
+    }
+  }
+}
